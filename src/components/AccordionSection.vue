@@ -19,7 +19,7 @@ export default {
     },
     data() {
         return {
-            openAccordionId: 1,
+            openAccordionId: 0,
             accordionItems: [
                 {
                     id: 1,

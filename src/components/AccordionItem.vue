@@ -17,7 +17,7 @@
         <!-- Content -->
         <div class="transition-all duration-500 ease-out overflow-hidden"
             :style="{ maxHeight: isOpen ? contentHeight + 'px' : '0px' }">
-            <div ref="content" class="px-8 py-20 flex items-center">
+            <div ref="content" class="px-8 py-12 flex items-center">
                 <p class="w-1/2 text-gray-600 text-base lg:text-lg leading-relaxed">
                     {{ item.description }}
                 </p>

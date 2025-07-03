@@ -1,12 +1,14 @@
 <template>
     <section class="container mx-auto pb-20">
-        <h2 class="font-manrope text-3xl text-[#0C1A30] text-center pb-20 uppercase">Biziň Üstünliklerimiziň Görkezijisi</h2>
+        <h2 class="font-manrope text-3xl text-[#0C1A30] text-center pb-20 uppercase" :class="{ 'animate-fade-in': showAnimations }">Biziň Üstünliklerimiziň Görkezijisi
+        </h2>
 
         <!-- First Row -->
         <div class="grid grid-cols-1 md:grid-cols-12 gap-0 mb-0">
             <!-- Experience Card - Takes 3 columns -->
             <article
-                class="stat-card bg-blue-700 p-6 sm:p-8 lg:p-10 flex flex-col justify-between min-h-[200px] sm:min-h-[240px] lg:min-h-[280px] animate-scale-in animation-delay-100 md:col-span-2">
+                class="stat-card bg-blue-700 p-6 sm:p-8 lg:p-10 flex flex-col justify-between min-h-[200px] sm:min-h-[240px] lg:min-h-[280px] md:col-span-2"
+                :class="{'animate-scale-in': showAnimations, 'animation-delay-100': showAnimations}">
                 <div>
                     <h2 class="stat-label text-lg sm:text-xl lg:text-2xl mb-2">Tejribämiz</h2>
                 </div>
@@ -19,7 +21,8 @@
 
             <!-- Completed Projects Card - Takes 4 columns -->
             <article
-                class="stat-card bg-gray-400 p-6 sm:p-8 lg:p-10 flex flex-col justify-between min-h-[200px] sm:min-h-[240px] lg:min-h-[280px] animate-scale-in animation-delay-200 md:col-span-4"
+                class="stat-card bg-gray-400 p-6 sm:p-8 lg:p-10 flex flex-col justify-between min-h-[200px] sm:min-h-[240px] lg:min-h-[280px] md:col-span-4"
+                :class="{'animate-scale-in': showAnimations, 'animation-delay-200': showAnimations}"
                 @mouseenter="handleHover('completed')" @mouseleave="handleLeave('completed')">
                 <div>
                     <h2 class="stat-label text-lg sm:text-xl lg:text-2xl mb-2">Ýerine ýetiren işlerimiz</h2>
@@ -33,7 +36,8 @@
 
             <!-- Workers Card - Takes 3 columns -->
             <article
-                class="stat-card bg-slate-500 p-6 sm:p-8 lg:p-10 flex flex-col justify-between min-h-[200px] sm:min-h-[240px] lg:min-h-[280px] animate-scale-in animation-delay-300 md:col-span-3"
+                class="stat-card bg-slate-500 p-6 sm:p-8 lg:p-10 flex flex-col justify-between min-h-[200px] sm:min-h-[240px] lg:min-h-[280px] md:col-span-3"
+                :class="{'animate-scale-in': showAnimations, 'animation-delay-300': showAnimations}"
                 @mouseenter="handleHover('workers')" @mouseleave="handleLeave('workers')">
                 <div>
                     <h2 class="stat-label text-lg sm:text-xl lg:text-2xl mb-2">Işgärlerimiz</h2>
@@ -47,7 +51,8 @@
 
             <!-- Ongoing Projects Card - Takes 2 columns -->
             <article
-                class="stat-card bg-emerald-700 p-6 sm:p-8 lg:p-10 flex flex-col justify-between min-h-[200px] sm:min-h-[240px] lg:min-h-[280px] animate-scale-in animation-delay-400 md:col-span-3"
+                class="stat-card bg-emerald-700 p-6 sm:p-8 lg:p-10 flex flex-col justify-between min-h-[200px] sm:min-h-[240px] lg:min-h-[280px] md:col-span-3"
+                :class="{'animate-scale-in': showAnimations, 'animation-delay-400': showAnimations}"
                 @mouseenter="handleHover('ongoing')" @mouseleave="handleLeave('ongoing')">
                 <div>
                     <h2 class="stat-label text-lg sm:text-xl lg:text-2xl mb-2">Dowam edýän işlerimiz</h2>
@@ -64,7 +69,8 @@
         <div class="grid grid-cols-1 md:grid-cols-12 gap-0">
             <!-- 2025 Projects Card - Takes 5 columns -->
             <article
-                class="stat-card bg-slate-600 p-6 sm:p-8 lg:p-10 flex flex-col justify-between min-h-[200px] sm:min-h-[240px] lg:min-h-[280px] animate-scale-in animation-delay-500 md:col-span-5"
+                class="stat-card bg-slate-600 p-6 sm:p-8 lg:p-10 flex flex-col justify-between min-h-[200px] sm:min-h-[240px] lg:min-h-[280px] md:col-span-5"
+                :class="{'animate-scale-in': showAnimations, 'animation-delay-500': showAnimations}"
                 @mouseenter="handleHover('current')" @mouseleave="handleLeave('current')">
                 <div>
                     <h2 class="stat-label text-lg sm:text-xl lg:text-2xl mb-2">2025-nji ýylda ýerine ýetiren işlerimiz
@@ -79,7 +85,8 @@
 
             <!-- Major Projects Card - Takes 7 columns -->
             <article
-                class="stat-card bg-blue-500 p-6 sm:p-8 lg:p-10 flex flex-col justify-between min-h-[200px] sm:min-h-[240px] lg:min-h-[280px] animate-scale-in animation-delay-600 md:col-span-7"
+                class="stat-card bg-blue-500 p-6 sm:p-8 lg:p-10 flex flex-col justify-between min-h-[200px] sm:min-h-[240px] lg:min-h-[280px] md:col-span-7"
+                :class="{'animate-scale-in': showAnimations, 'animation-delay-600': showAnimations}"
                 @mouseenter="handleHover('major')" @mouseleave="handleLeave('major')">
                 <div>
                     <h2 class="stat-label text-lg sm:text-xl lg:text-2xl mb-2">Uly işlerimiz</h2>
@@ -99,6 +106,7 @@ export default {
     name: 'AdvantageSection',
     data() {
         return {
+            showAnimations: false,
             // Target values
             targetValues: {
                 experience: 31,
@@ -125,13 +133,14 @@ export default {
             (entries) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting && !this.isAnimating) {
-                        this.startCounterAnimations()
-                        observer.disconnect()
+                        this.showAnimations = true;
+                        this.startCounterAnimations();
+                        observer.disconnect();
                     }
-                })
+                });
             },
-            { threshold: 0.4 }
-        )
+            { threshold: 0.5 }
+        );
 
         this.$nextTick(() => {
             const section = this.$el

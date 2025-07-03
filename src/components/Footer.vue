@@ -1,5 +1,5 @@
 <template>
-  <footer class="w-full pt-5 text-white bg-custom-gradient-1 px-4 sm:px-0">
+  <footer class="w-full pt-5 text-white bg-gradient-to-r from-blue-800 via-blue-700 to-blue-900 px-4 sm:px-0">
     <div class="container-sm sm:container flex flex-col">
       <div class="w-full flex laptop:flex-row flex-col laptop:items-start justify-between my-16">
         <div class="flex flex-col space-y-5">
@@ -77,7 +77,7 @@
         <p class="font-inter text-sm text-white/60">Made by ParlakNesil</p>
       </div>
       <div
-        class="flex sm:flex-row flex-col sm:space-y-0 space-y-10 sm:items-center items-start justify-between py-5 border-t-2 border-blue-800">
+        class="flex sm:flex-row flex-col sm:space-y-0 space-y-10 sm:items-center items-start justify-between py-5 border-t border-opacity-20 border-blue-200">
         <div class="w-[124px] h-[74px]">
           <img class="w-full h-full object-cover" src="/svgs/doganlar.svg">
         </div>

@@ -3,7 +3,7 @@
         <span class="text-sm uppercase" :class="[text_color, px]">
             {{ name }}
         </span>
-        <div class="p-2 rounded-md" :class="[icon_bg_color]">
+        <div class="p-2 mr-1 rounded-md group-hover:translate-x-1 duration-300" :class="[icon_bg_color]">
             <rightRowIcon :color="icon_color" />
         </div>
     </router-link>

@@ -1,9 +1,9 @@
 <template>
   <div
-    :class="['fixed w-full top-0 z-50 mx-auto text-white select-none', { 'bg-custom-gradient-1': isScrolled }, background]">
+    :class="['fixed w-full top-0 z-50 mx-auto text-white select-none', { 'bg-gradient-to-r from-blue-800 via-blue-700 to-blue-900': isScrolled }, background]">
     <nav class="sm:container px-4">
       <div class="flex items-center flex-row py-6 justify-between">
-        <router-link to="/" class="flex items-center justify-center w-70 cursor-pointer">
+        <router-link to="/" class="flex items-center justify-center w-56 cursor-pointer">
           <img class="w-full h-full object-cover" src="/svgs/logo.svg">
         </router-link>
         <div class="laptop:flex items-center hidden">
@@ -103,15 +103,15 @@
       <div class="w-full flex items-center justify-center space-x-6 mt-20">
         <a href="https://www.instagram.com/ajayyp__gurlushyk?igsh=YzU2c3FscGFja2g%3D&utm_source=qr" target="_blank"
           class="w-8 border rounded-full p-2">
-          <img class="w-full h-full cursor-pointer" src="/icon/instagram.svg" alt="instagram">
+          <img class="w-full h-full cursor-pointer" src="/svgs/instagram.svg" alt="instagram">
         </a>
         <a href="https://www.facebook.com/profile.php?id=61564710432722" target="_blank"
           class="w-8 border rounded-full p-2">
-          <img class="w-full h-full cursor-pointer" src="/icon/facebook.svg" alt="facebook">
+          <img class="w-full h-full cursor-pointer" src="/svgs/facebook.svg" alt="facebook">
         </a>
         <a href="https://www.youtube.com/channel/UCNelgrppCVytiD6rBeNNJOQ" target="_blank"
           class="w-8 border rounded-full p-2">
-          <img class="w-full h-full cursor-pointer" src="/icon/youtube.svg" alt="youtube">
+          <img class="w-full h-full cursor-pointer" src="/svgs/youtube.svg" alt="youtube">
         </a>
       </div>
     </div>

@@ -1,7 +1,7 @@
 <template>
-    <section class="pt-20">
+    <section class="py-20">
         <h2 class="font-manrope text-base text-[#0C1A30] text-center pb-10">1994-nji ýyldan bäri ösen gurluşyk çözgütleri</h2>
-        <div class="pb-40 bg-white relative overflow-hidden">
+        <div class="bg-white relative overflow-hidden">
             <div v-for="(line, index) in lines" :key="index" :style="{ transform: `translateX(${positions[index]}px)` }"
                 class="w-full text-[70px] text-[#0F172A]"
                 :class="index % 2 === 0 ? 'text-center pr-40' : 'text-right pr-4 md:pr-16'">
