@@ -1,22 +1,31 @@
 <template>
     <div v-show="!isLoading" class="w-full h-full">
         <!-- Navbar -->
-        <Navbar />
+        <Navbar link="home" />
         <!-- Hero section -->
         <div class="w-full h-full relative">
-            <img v-lazy="`/imgs/header.webp`" class="w-full h-full object-cover" lazy="loading">
+            <img v-lazy="`/imgs/project-4.webp`" class="w-full h-full object-cover max-h-screen" loading="lazy" />
             <div class="absolute top-0 left-0 w-full h-full bg-black opacity-20"></div>
-            <div class="absolute top-1/2 left-16 -translate-y-1/2 flex flex-col space-y-8 w-4/5">
-                <p class="font-manrope text-sm text-[#EDEDED] animate-fade-in">TÜRKMENISTAN BOÝUNÇA #1 GURLUŞYK KÄRHANASY</p>
-                <h1 class="font-manrope font-bold text-6xl tracking-[1%] leading-[130%] text-[#EDEDED] animate-fade-in animation-delay-200">Innowasion
-                    Çözgütler Bilen Berk Gurluşyk — Geljegi Bilelikde Gurýarys.</h1>
-                <Button class="animate-fade-right" :name="$t('links.works')" route="/works" px="px-8" />
+            <div
+                class="absolute top-1/2 left-0 -translate-y-1/2 px-4 sm:px-8 md:px-16 flex flex-col space-y-6 w-full max-w-[1200px]">
+                <p class="font-manrope text-xs sm:text-sm text-[#EDEDED] animate-fade-in text-center md:text-left">
+                    TÜRKMENISTAN BOÝUNÇA #1 GURLUŞYK KÄRHANASY
+                </p>
+                <h1
+                    class="font-manrope font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl tracking-tight leading-snug text-[#EDEDED] animate-fade-in animation-delay-200 text-center md:text-left">
+                    Innowasion Çözgütler Bilen Berk Gurluşyk — Geljegi Bilelikde Gurýarys.
+                </h1>
+                <div class="flex justify-center md:justify-start">
+                    <Button class="animate-fade-right" :name="$t('links.works')" route="/works" px="px-8" />
+                </div>
             </div>
-            <div class="w-[35%] absolute bottom-10 right-[54px]">
-                <!-- Swiper -->
-                <swiper :scrollbar="{ hide: false }" :modules="modules" :autoplay="{ delay: 1000, disableOnInteraction: false }">
+            <div
+                class="absolute w-[90%] md:w-[40%] bottom-4 md:bottom-10 left-1/2 md:left-auto md:right-[54px] transform -translate-x-1/2 md:translate-x-0">
+                <swiper :scrollbar="{ hide: false }" :modules="modules"
+                    :autoplay="{ delay: 2500, disableOnInteraction: false }">
                     <swiper-slide v-for="item in header_text" :key="item.id">
-                        <p class="font-manrope text-sm text-[#FFFFFFE5] tracking-[1%] leading-[140%] pb-10">
+                        <p
+                            class="font-manrope text-xs sm:text-sm text-white/90 tracking-wide leading-relaxed pb-6 sm:pb-10">
                             {{ item.text }}
                         </p>
                     </swiper-slide>
@@ -43,7 +52,8 @@
         <Footer />
     </div>
     <!-- LOADER -->
-    <div v-if="isLoading" class="w-full h-full relative bg-gradient-to-r from-blue-800 via-blue-700 to-blue-900 overflow-hidden">
+    <div v-if="isLoading"
+        class="w-full h-full relative bg-gradient-to-r from-blue-800 via-blue-700 to-blue-900 overflow-hidden">
         <div class="absolute top-3 sm:left-20 left-4 flex items-center">
             <img class="md:w-72 w-52" src="/svgs/logo.svg">
         </div>
@@ -59,7 +69,6 @@ import Map from "@/components/Map.vue"
 import Navbar from "@/components/Navbar.vue"
 import Footer from "@/components/Footer.vue"
 import Button from "@/components/base/button.vue"
-import AnimatedCounter from "@/components/AnimatedCounter.vue"
 import AdvertisementSection from "@/components/AdvertisementSection.vue"
 import AdvantageSection from "@/components/AdvantageSection.vue"
 import AboutSection from "@/components/AboutSection.vue"
@@ -86,7 +95,6 @@ export default {
         Map,
         Swiper,
         SwiperSlide,
-        AnimatedCounter,
         Button,
         AdvertisementSection,
         AdvantageSection,
@@ -155,46 +163,7 @@ export default {
                     text: 'Bu bina döwrebap arhitektura çözgütleri bilen guruldy. Uly penjireler, ýokary hilli gurluşyk serişdeleri we energiýany tygşytlaýan ulgamlar bilen enjamlaşdyrylan. Binanyň içerki dizaýny amatlylyk we döwrebaplyk ýörelgelerine laýyklykda işlenip düzüldi.',
                 },
             ],
-            features: [
-                {
-                    id: 1,
-                    icon: 'diamond',
-                    title: 'Ygtybarlylyк, Hil',
-                    description: 'Taslamalarymyzy jogapkärçilik bilen ýerine ýetirýäris. Her bir hyzmatdaşymyz bize doly ynam edip bilýär.'
-                },
-                {
-                    id: 2,
-                    icon: 'settings',
-                    title: 'Jogapkärçilik',
-                    description: 'Her bir ädimimizde jogapkärçiligi çemeleşýäris. Netijelerimizin arkasында berk durýarys.'
-                },
-                {
-                    id: 3,
-                    icon: 'innovation',
-                    title: 'Innowasiya',
-                    description: 'Täze tehnologiýalary we usullary işimize ornaşdyrýarys.'
-                },
-                {
-                    id: 4,
-                    icon: 'shield',
-                    title: 'Howpsuzlyk',
-                    description: 'Müşderilerin howpsuzlygy ileri tutulýar. Gurlušyk meýdançalarynda howpsuzlyk düzgünlerine eýerýäris.'
-                },
-                {
-                    id: 5,
-                    icon: 'clock',
-                    title: 'Wagta laýyklyk',
-                    description: 'Taslamalarymyzy bellenen möhletde tabşyrmak bizin borjumyzdyr. Müny hil bilen utgaşykly ýerine ýetirýäris.'
-                },
-                {
-                    id: 6,
-                    icon: 'users',
-                    title: 'Müşderi kanagatlylygy',
-                    description: 'Müşderilerin işlegleri we tekipleri üns merkezimizdir.'
-                }
-            ],
             modules: [Scrollbar, Pagination, Navigation, EffectCoverflow, Autoplay],
-            isIphone: false,
             fadeShow: false,
             isLoading: false,
         }

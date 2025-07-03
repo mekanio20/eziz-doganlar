@@ -1,80 +1,153 @@
 <template>
     <div class="w-full h-full">
-        <Navbar link="contact" background="bg-custom-gradient-1" />
-        <div class="sm:container px-4 laptop:mb-20 mb-6">
+        <Navbar link="contact" background="bg-gradient-to-r from-blue-800 via-blue-700 to-blue-900" />
+
+        <div class="sm:container px-4">
+            <!-- Breadcrumb -->
             <div class="mt-32 flex items-center space-x-2">
-                <router-link to="/" class="font-inter font-normal sm:text-lg text-base text-m_bg_gray_4">{{ $t('links.anasayfa')
-                    }}</router-link>
+                <router-link to="/" class="font-inter font-normal sm:text-lg text-base text-m_bg_gray_4">
+                    {{ $t('links.home') }}
+                </router-link>
                 <span class="text-m_bg_gray_4">></span>
-                <router-link to="/contact" class="font-inter font-normal sm:text-lg text-base text-m_bg_gray_4">{{ $t('links.iletishim')
-                    }}</router-link>
+                <router-link to="/contact" class="font-inter font-normal sm:text-lg text-base text-m_bg_gray_4">
+                    {{ $t('links.contact') }}
+                </router-link>
             </div>
-            <div class="py-10 flex laptop:flex-row flex-col-reverse laptop:items-end items-center laptop:justify-start justify-start sm:mr-10">
-                <div class="flex pt-10 items-start xl:w-1/2 sm:w-537 w-full flex-col laptop:mr-20">
-                    <h2 class="mb-12 font-sans font-bold sm:text-4xl text-3xl laptop:text-start">{{ $t('links.iletishim') }}</h2>
-                    <input class="p-4 bg-gray-50 w-full mb-5" type="text" :placeholder="$t('subtitles.isminiz')">
-                    <input class="p-4 bg-gray-50 w-full mb-5" type="email" :placeholder="$t('subtitles.eposta')">
-                    <textarea class="p-4 bg-gray-50 w-full mb-5" rows="8" :placeholder="$t('subtitles.mesaj')"></textarea>
-                    <button class="w-full text-center rounded text-white p-4 sm:text-xl text-base bg-m_bg_blue_4 hover:bg-m_bg_blue_3">{{ $t('subtitles.gonder') }}</button>
+
+            <!-- Title -->
+            <h2 class="py-10 font-manrope font-medium sm:text-5xl text-4xl laptop:text-start">
+                {{ $t('links.contact') }}
+            </h2>
+
+            <!-- Form & Contact Info -->
+            <div class="flex laptop:flex-row flex-col laptop:space-y-0 space-y-20 items-start justify-start">
+                <!-- Form -->
+                <div class="flex w-full items-start flex-col space-y-6 laptop:mr-20">
+                    <!-- Input Fields -->
+                    <div v-for="(field, key) in fields" :key="key" class="w-full relative">
+                        <input v-model="form[key]" :type="field.type" :id="key"
+                            :class="['w-full px-0 py-4 text-lg border-0 border-b border-[#0C1A30] bg-transparent placeholder-transparent focus:border-primary-600 focus:outline-none peer', errors[key] ? 'border-red-500' : '']"
+                            :placeholder="field.placeholder" required />
+                        <label :for="key"
+                            class="absolute left-0 -top-6 text-gray-600 text-sm transition-all peer-placeholder-shown:text-lg peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-4 peer-focus:-top-0 peer-focus:text-primary-600 peer-focus:text-sm">
+                            {{ field.label }}
+                        </label>
+                        <div v-if="errors[key]" class="text-red-500 text-sm mt-1">{{ errors[key] }}</div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button
+                        class="w-full font-manrope font-semibold !mt-16 text-center rounded-md text-white p-4 sm:text-xl text-base bg-[#003DA6] hover:bg-[#3c7ade] duration-300 uppercase">
+                        UGRATMAK
+                    </button>
                 </div>
-                <div class="laptop:w-1/2 sm:w-537 w-full">
-                    <div class="w-full h-full relative z-0">
-                        <Map />
+
+                <!-- Contact Info -->
+                <div class="w-full laptop:w-1/2 px-4 sm:px-10 lg:px-20 mb-10 laptop:mb-0">
+                    <div class="flex flex-col space-y-10">
+                        <div class="flex flex-col space-y-5">
+                            <h4 class="font-manrope text-base font-medium text-[#003DA6]">Ýazmak üçin</h4>
+                            <a href="mailto:info@ezizdoganlar.com"
+                                class="font-manrope text-[#0C1A30] font-[300] text-base">
+                                info@ezizdoganlar.com
+                            </a>
+                        </div>
+                        <div class="flex flex-col space-y-5">
+                            <h4 class="font-manrope text-base font-medium text-[#003DA6]">Jaň etmek</h4>
+                            <a href="tel:+99312753577" class="font-manrope text-[#0C1A30] font-[300] text-base">
+                                +993 12 75 35 77
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Address and Socials -->
+            <div class="flex flex-col space-y-2 pt-16 pb-10">
+                <div
+                    class="flex flex-col md:flex-row items-start md:items-center justify-between space-y-4 md:space-y-0">
+                    <p class="font-manrope text-[#0C1A30] font-[300] text-xl uppercase">
+                        9 Garagum Street, Bagtyyarlyk district, Ashgabat 745202, Turkmenistan
+                    </p>
+                    <div class="flex items-center space-x-2">
+                        <a href="#" class="w-9">
+                            <img class="w-full h-full object-cover" v-lazy="`/svgs/_facebook.svg`" />
+                        </a>
+                        <a href="#" class="w-9">
+                            <img class="w-full h-full object-cover" v-lazy="`/svgs/_instagram.svg`" />
+                        </a>
+                        <a href="#" class="w-9">
+                            <img class="w-full h-full object-cover" v-lazy="`/svgs/_youtube.svg`" />
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="phone:container container-sm">
-            <div class="my-10 py-10 flex sm:flex-row flex-col sm:items-center sm:space-y-0 space-y-10 items-start justify-between md:px-20 px-4 sm:space-x-10 bg-m_bg_gray_3">
-                <div class="flex items-start justify-start">
-                    <div class="laptop:w-8 laptop:h-8 w-5 h-5 lg:block hidden mr-3 mb-3">
-                        <img class="w-full h-full object-cover" v-lazy="`/icon/email.svg`">
-                    </div>
-                    <div class="flex flex-col items-start">
-                        <h4 class="font-inter font-semibold laptop:text-2xl phpne:text-xl sm:text-lg text-sm mb-4">{{ $t('subtitles.eposta') }}</h4>
-                        <a class="font-inter font-normal laptop:text-base sm:text-sm text-xs mb-2 text-m_bg_gray_4" href="mailto:ajayypgurlushyk.info@gmail.com">ajayypgurlushyk.info@gmail.com</a>
-                        <a class="font-inter font-normal laptop:text-base sm:text-sm text-xs text-m_bg_gray_4" href="mailto:ajayypgurlushyk.info@gmail.com">ajayypgurlushyk.info@gmail.com</a>
-                    </div>
-                </div>
-                <div class="flex items-start justify-start">
-                    <div class="laptop:w-8 laptop:h-8 w-5 h-5 lg:block hidden mr-3 mb-3">
-                        <img class="w-full h-full object-cover" v-lazy="`/icon/phone.svg`">
-                    </div>
-                    <div class="flex flex-col items-start">
-                        <h4 class="font-inter font-semibold laptop:text-2xl phpne:text-xl sm:text-lg text-sm mb-4">{{ $t('titles.telefon') }}</h4>
-                        <a href="tel:12754051" class="font-inter font-normal laptop:text-base sm:text-sm text-xs mb-2 text-m_bg_gray_4">12754051</a>
-                        <a href="tel:12754055"class="font-inter font-normal laptop:text-base sm:text-sm text-xs text-m_bg_gray_4">12754055</a>
-                    </div>
-                </div>
-                <div class="flex items-start justify-start">
-                    <div class="laptop:w-8 laptop:h-8 w-5 h-5 lg:block hidden mr-3 mb-3">
-                        <img class="w-full h-full object-cover" v-lazy="`/icon/location.svg`">
-                    </div>
-                    <div class="flex flex-col items-start">
-                        <h4 class="font-inter font-semibold laptop:text-2xl phpne:text-xl sm:text-lg text-sm mb-4">{{ $t('titles.ofis') }}</h4>
-                        <p class="font-inter font-normal laptop:text-base sm:text-sm text-xs mb-2 text-m_bg_gray_4">G, Kuliýew köçesi 36</p>
-                        <p class="font-inter font-normal laptop:text-base sm:text-sm text-xs text-m_bg_gray_4">Aşgabat, Türkmenistan</p>
-                    </div>
-                </div>
-            </div>
+
+        <!-- Map -->
+        <div class="w-full h-[600px]">
+            <iframe class="w-full h-full"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d201318.17307570975!2d58.25028409999999!3d37.96320754999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f6ffe1bab3684d9%3A0x3cde013f62d3ade9!2zQcWfa2FiYXQ!5e0!3m2!1str!2s!4v1751547853761!5m2!1str!2s"
+                style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
+
         <Footer />
     </div>
 </template>
 
 <script>
-import Map from "@/components/Map.vue"
-import Navbar from "@/components/Navbar.vue"
-import Footer from "@/components/Footer.vue"
-import { RouterLink } from 'vue-router'
+import Navbar from '@/components/Navbar.vue';
+import Footer from '@/components/Footer.vue';
 
 export default {
-    name: "Contact",
+    name: 'ContactPage',
     components: {
-        RouterLink,
         Navbar,
-        Footer,
-        Map,
+        Footer
     },
+    data() {
+        return {
+            form: {
+                fullName: '',
+                phone: '',
+                email: '',
+                message: ''
+            },
+            errors: {},
+            fields: {
+                fullName: { label: 'Doly adyňyz', placeholder: 'Doly adyňyz', type: 'text' },
+                phone: { label: 'Telefon belginiz', placeholder: 'Telefon belginiz', type: 'tel' },
+                email: { label: 'Elektron salgyňyz', placeholder: 'Elektron salgyňyz', type: 'email' },
+                message: { label: 'Habarlaşmak', placeholder: 'Habarlaşmak', type: 'text' }
+            }
+        }
+    },
+    methods: {
+        validateForm() {
+            this.errors = {};
+
+            if (!this.form.fullName.trim()) this.errors.fullName = 'Doly adyňyzy giriziň';
+            if (!this.form.phone.trim()) {
+                this.errors.phone = 'Telefon belgiňizi giriziň';
+            } else if (!/^[\d\s\-+()]+$/.test(this.form.phone)) {
+                this.errors.phone = 'Telefon belgisi dogry däl';
+            }
+            if (!this.form.email.trim()) {
+                this.errors.email = 'E-mail adresini giriziň';
+            } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.form.email)) {
+                this.errors.email = 'E-mail adresi dogry däl';
+            }
+            if (!this.form.message.trim()) this.errors.message = 'Habarňyzy giriziň';
+
+            return Object.keys(this.errors).length === 0;
+        },
+        async submitForm() {
+            if (!this.validateForm()) return;
+            // fake submit
+            await new Promise(res => setTimeout(res, 1500));
+            alert('Form ugratdyňyz!');
+        }
+    }
 }
 </script>

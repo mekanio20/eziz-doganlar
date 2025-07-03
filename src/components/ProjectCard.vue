@@ -26,7 +26,7 @@
                 <!-- Bottom Section - Title -->
                 <div
                     class="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out">
-                    <h3 class="text-white text-xl sm:text-2xl lg:text-3xl font-bold leading-tight mb-2">
+                    <h3 class="text-white text-lg sm:text-xl lg:text-2xl font-bold leading-tight mb-2">
                         {{ project.title }}
                     </h3>
                     <div

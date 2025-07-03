@@ -2,13 +2,13 @@
     <div class="relative" :class="[item.color]">
         <!-- Header -->
         <button @click="toggle"
-            class="w-full flex items-center justify-between py-10 px-8 text-left transition-colors duration-200 focus:outline-none">
+            class="w-full flex flex-col sm:flex-row items-start sm:items-center justify-between py-6 sm:py-10 px-4 sm:px-8 text-left transition-colors duration-200 focus:outline-none gap-4">
             <!-- Number and Title -->
-            <div class="flex items-center space-x-40">
-                <span class="font-manrope text-xl font-medium text-[#0C1A30]">
+            <div class="flex flex-col sm:flex-row sm:items-center sm:space-x-10">
+                <span class="font-manrope text-base sm:text-lg md:text-xl font-medium text-[#0C1A30]">
                     {{ item.number }}
                 </span>
-                <h3 class="font-manrope text-xl font-medium text-[#0C1A30]">
+                <h3 class="font-manrope text-lg sm:text-xl font-medium text-[#0C1A30]">
                     {{ item.title }}
                 </h3>
             </div>
@@ -17,12 +17,14 @@
         <!-- Content -->
         <div class="transition-all duration-500 ease-out overflow-hidden"
             :style="{ maxHeight: isOpen ? contentHeight + 'px' : '0px' }">
-            <div ref="content" class="px-8 py-12 flex items-center">
-                <p class="w-1/2 text-gray-600 text-base lg:text-lg leading-relaxed">
+            <div ref="content" class="px-4 sm:px-8 py-6 sm:py-12 flex flex-col lg:flex-row items-start gap-6 lg:gap-10">
+                <!-- Text -->
+                <p class="text-gray-600 text-sm sm:text-base lg:text-lg leading-relaxed lg:w-1/2 w-full">
                     {{ item.description }}
                 </p>
+
                 <!-- Image -->
-                <div class="w-[300px] absolute right-4 top-10 mb-40">
+                <div class="w-full lg:w-[300px] h-auto relative lg:absolute lg:right-4 lg:top-10">
                     <img :src="item.image"
                         class="w-full h-full object-cover rounded-lg hover:scale-105 transition-transform duration-300" />
                 </div>
@@ -37,35 +39,35 @@ export default {
     props: {
         item: {
             type: Object,
-            required: true
+            required: true,
         },
         isOpen: {
             type: Boolean,
-            default: false
-        }
+            default: false,
+        },
     },
     data() {
         return {
-            contentHeight: 0
-        }
+            contentHeight: 0,
+        };
     },
     mounted() {
-        this.calculateHeight()
+        this.calculateHeight();
     },
     updated() {
-        this.calculateHeight()
+        this.calculateHeight();
     },
     methods: {
         toggle() {
-            this.$emit('toggle', this.item.id)
+            this.$emit('toggle', this.item.id);
         },
         calculateHeight() {
             this.$nextTick(() => {
                 if (this.$refs.content) {
-                    this.contentHeight = this.$refs.content.scrollHeight
+                    this.contentHeight = this.$refs.content.scrollHeight;
                 }
-            })
-        }
-    }
-}
+            });
+        },
+    },
+};
 </script>

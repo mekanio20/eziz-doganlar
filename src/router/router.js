@@ -34,12 +34,12 @@ const router = createRouter({
       component: () => import("@/views/CareerDetailView.vue"),
     },
     {
-      path: "/projects",
+      path: "/works",
       name: "Project",
       component: () => import("@/views/ProjectView.vue"),
     },
     {
-      path: "/projects/:id",
+      path: "/works/:id",
       name: "ProjectDetail",
       component: () => import("@/views/ProjectDetailView.vue"),
     },
@@ -47,16 +47,6 @@ const router = createRouter({
       path: "/productions",
       name: "Production",
       component: () => import("@/views/ProductionView.vue"),
-    },
-    {
-      path: "/news",
-      name: "News",
-      component: () => import("@/views/NewsView.vue"),
-    },
-    {
-      path: "/news/:id",
-      name: "NewsDetail",
-      component: () => import("@/views/NewsDetailView.vue"),
     },
     {
       path: "/contact",

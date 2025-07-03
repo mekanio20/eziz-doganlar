@@ -1,6 +1,6 @@
 <template>
-    <router-link :to="route" class="w-fit p-1 rounded-md font-manrope flex items-center group" :class="[bg_color]">
-        <span class="text-sm uppercase" :class="[text_color, px]">
+    <router-link :to="route" class="w-fit p-1 rounded-md font-manrope flex items-center group text-nowrap" :class="[bg_color]">
+        <span class="sm:text-sm text-xs uppercase" :class="[text_color, px]">
             {{ name }}
         </span>
         <div class="p-2 mr-1 rounded-md group-hover:translate-x-1 duration-300" :class="[icon_bg_color]">

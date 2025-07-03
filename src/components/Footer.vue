@@ -3,11 +3,11 @@
     <div class="container-sm sm:container flex flex-col">
       <div class="w-full flex laptop:flex-row flex-col laptop:items-start justify-between my-16">
         <div class="flex flex-col space-y-5">
-          <div class="flex flex-col space-y-20">
+          <div class="flex flex-col space-y-10">
             <p class="font-manrope text-xl text-white w-[80%]">
               Innowasion Çözgütler Bilen Berk Gurluşyk — Geljegi Bilelikde Gurýarys.
             </p>
-            <div class="flex items-center space-x-5">
+            <div class="flex items-center space-x-5 pb-10">
               <a href="#" target="_blank">
                 <div
                   class="phone:w-9 phone:h-9 w-7 h-7 p-1 rounded-full bg-transparent border flex items-center justify-center cursor-pointer">
@@ -31,7 +31,7 @@
           </div>
         </div>
         <div
-          class="laptop:flex laptop:items-start laptop:justify-end grid phone:grid-cols-3 grid-cols-2 gap-y-14 gap-x-32">
+          class="laptop:flex laptop:items-start laptop:justify-end grid phone:grid-cols-3 grid-cols-2 gap-y-14 sm:gap-x-16 gap-x-10">
           <div class="flex flex-col space-y-5">
             <h4 class="font-manrope text-base font-medium text-white/60">Nawigasiýa</h4>
             <router-link to="/" class="text-white font-manrope font-[300] text-base">{{
@@ -44,6 +44,17 @@
                     $t('links.services') }}</router-link>
             <router-link to="/contact" class="text-white font-manrope font-[300] text-base">{{
                     $t('links.contact') }}</router-link>
+          </div>
+          <div class="flex flex-col space-y-5">
+            <router-link to="/news" class="font-manrope text-base font-medium text-white/60">Salgymyz</router-link>
+            <p class="font-manrope text-base font-[300]">
+              9 Garagum Street
+              Bagtyyarlyk district Ashgabat
+              745202, Turkmenistan
+            </p>
+            <p class="font-manrope text-base font-[300]">
+              (9:00 - 18:00)
+            </p>
           </div>
           <div class="flex flex-col space-y-10">
             <div class="flex flex-col space-y-5">
@@ -59,29 +70,18 @@
               </a>
             </div>
           </div>
-          <div class="flex flex-col space-y-5">
-            <router-link to="/news" class="font-manrope text-base font-medium text-white/60">Salgymyz</router-link>
-            <p class="font-manrope text-base font-[300]">
-              9 Garagum Street
-              Bagtyyarlyk district Ashgabat
-              745202, Turkmenistan
-            </p>
-            <p class="font-manrope text-base font-[300]">
-              (9:00 - 18:00)
-            </p>
-          </div>
         </div>
       </div>
-      <div class="flex items-center justify-between pb-6">
-        <p class="font-inter text-sm text-white/60">© 2025 Eziz Doganlar. Ähli hukuklar goragly.</p>
-        <p class="font-inter text-sm text-white/60">Made by ParlakNesil</p>
+      <div class="flex sm:flex-row flex-col sm:space-y-0 space-y-2 items-center justify-between pb-6">
+        <p class="font-inter sm:text-sm text-xs text-white/60">© 2025 Eziz Doganlar. Ähli hukuklar goragly.</p>
+        <p class="font-inter sm:text-sm text-xs text-white/60">Made by ParlakNesil</p>
       </div>
       <div
-        class="flex sm:flex-row flex-col sm:space-y-0 space-y-10 sm:items-center items-start justify-between py-5 border-t border-opacity-20 border-blue-200">
+        class="flex sm:flex-row flex-col sm:space-y-0 space-y-6 sm:items-center items-start justify-between py-5 border-t border-opacity-20 border-blue-200">
         <div class="w-[124px] h-[74px]">
           <img class="w-full h-full object-cover" src="/svgs/doganlar.svg">
         </div>
-        <h1 class="font-manrope font-medium text-7xl text-white">
+        <h1 class="font-manrope font-medium md:text-7xl text-5xl text-white">
           EZIZ DOGANLAR
         </h1>
       </div>
