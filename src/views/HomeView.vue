@@ -4,7 +4,7 @@
         <Navbar link="home" />
         <!-- Hero section -->
         <div class="w-full h-full relative">
-            <img v-lazy="`/imgs/project-4.webp`" class="w-full h-full object-cover max-h-screen" loading="lazy" />
+            <img v-lazy="`/imgs/home.webp`" class="w-full h-full object-cover max-h-screen" loading="lazy" />
             <div class="absolute top-0 left-0 w-full h-full bg-black opacity-20"></div>
             <div
                 class="absolute top-1/2 left-0 -translate-y-1/2 px-4 sm:px-8 md:px-16 flex flex-col space-y-6 w-full max-w-[1200px]">

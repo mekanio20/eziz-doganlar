@@ -17,7 +17,7 @@
                 <div class="flex items-center justify-center space-x-2">
                     <div class="flex sm:flex-row flex-col gap-4">
                         <!-- Location dropdown -->
-                        <div class="relative font-manrope">
+                        <div class="relative font-manrope select-none">
                             <div @click="toggleDropdown('location')"
                                 class="cursor-pointer border border-gray-300 rounded-full px-4 py-2.5 text-sm text-[#0C1A30] flex items-center justify-between w-48">
                                 <span>{{ selectedLocation || 'Ýerleşýän ýeri' }}</span>
@@ -38,7 +38,7 @@
                             </div>
                         </div>
                         <!-- Category dropdown -->
-                        <div class="relative font-manrope">
+                        <div class="relative font-manrope select-none">
                             <div @click="toggleDropdown('category')"
                                 class="cursor-pointer border border-gray-300 rounded-full px-4 py-2.5 text-sm text-[#0C1A30] flex items-center justify-between w-48">
                                 <span>{{ selectedCategory || 'Ähli kategoriýalar' }}</span>
@@ -62,22 +62,24 @@
                 </div>
             </div>
             <div class="w-full mb-5 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 laptop:gap-x-10 gap-x-5">
-                <div v-for="item in projeler" :key="item.id">
+                <div v-for="(item, index) in _projects" :key="index">
                     <router-link :to="`/works/${item.id}`"
                         class="relative group flex items-start justify-start flex-col my-4"
                         v-scroll-reveal="{ origin: 'bottom', distance: '100px', duration: 1000 }">
-                        <!-- Resim -->
+                        <!-- Image -->
                         <div class="w-full h-full relative overflow-hidden rounded-lg">
-                            <img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                                src="/imgs/project-1.webp" loading="lazy" />
+                            <img class="w-full h-[380px] object-cover transition-transform duration-300 group-hover:scale-105"
+                                :src="_imgs[index]" loading="lazy" />
                             <!-- Hover Overlay -->
                             <div
                                 class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                 <div class="flex flex-col items-center text-center space-y-5 w-[80%] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                                    <h3 class="font-manrope font-normal text-sm text-white uppercase">Suwa degişli
-                                        gurluşyk, Aşgabat</h3>
-                                    <h2 class="font-manrope font-normal text-xl text-white uppercase">Horticultural
-                                        complex, greenhouse facilities</h2>
+                                    <h3 class="font-manrope font-normal text-sm text-white uppercase">
+                                        {{ item.subtitle }}
+                                    </h3>
+                                    <h2 class="font-manrope font-normal text-xl text-white uppercase">
+                                        {{ item.title }}
+                                    </h2>
                                 </div>
                                 <div class="flex items-center space-x-2 absolute bottom-5 left-1/2 transform -translate-x-1/2 hover:cursor-pointer hover:bg-slate-400/40 duration-300 rounded-full px-4 py-1">
                                     <p class="font-manrope font-normal text-sm text-white">Görmek</p>
@@ -114,8 +116,8 @@ export default {
     },
     data() {
         return {
-            activeId: 0,
-            projeler: null,
+            _imgs: projects.imgs,
+            _projects: projects[this.$i18n.locale],
             category: null,
             searchVal: null,
             selectedLocation: '',
@@ -143,7 +145,7 @@ export default {
         search(param) {
             this.searchVal = param
             const regex = new RegExp(this.searchVal, 'i')
-            this.projeler = projects[this.$i18n.locale].filter((item) => regex.test(item.title))
+            this._projects = projects[this.$i18n.locale].filter((item) => regex.test(item.title))
         },
     },
     watch: {
@@ -153,7 +155,7 @@ export default {
         '$i18n.locale': {
             immediate: true,
             handler() {
-                this.projeler = projects[this.$i18n.locale]
+                this._projects = projects[this.$i18n.locale]
             }
         }
     }

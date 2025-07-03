@@ -19,21 +19,6 @@ const router = createRouter({
       component: () => import("@/views/AboutView.vue"),
     },
     {
-      path: "/services/:name",
-      name: "Services",
-      component: () => import("@/views/ServicesView.vue"),
-    },
-    {
-      path: "/career",
-      name: "Career",
-      component: () => import("@/views/CareerView.vue"),
-    },
-    {
-      path: "/career/:id",
-      name: "CareerDetail",
-      component: () => import("@/views/CareerDetailView.vue"),
-    },
-    {
       path: "/works",
       name: "Project",
       component: () => import("@/views/ProjectView.vue"),
@@ -42,11 +27,6 @@ const router = createRouter({
       path: "/works/:id",
       name: "ProjectDetail",
       component: () => import("@/views/ProjectDetailView.vue"),
-    },
-    {
-      path: "/productions",
-      name: "Production",
-      component: () => import("@/views/ProductionView.vue"),
     },
     {
       path: "/contact",
