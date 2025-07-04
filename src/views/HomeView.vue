@@ -1,13 +1,13 @@
 <template>
     <div v-show="!isLoading" class="w-full h-full">
         <!-- Navbar -->
-        <Navbar link="home" />
+        <Navbar link="home" background="bg-gradient-to-r from-blue-800 via-blue-700 to-blue-900" />
         <!-- Hero section -->
         <div class="w-full h-full relative">
             <img v-lazy="`/imgs/home.webp`" class="w-full h-full object-cover max-h-screen" loading="lazy" />
             <div class="absolute top-0 left-0 w-full h-full bg-black opacity-20"></div>
             <div
-                class="absolute top-1/2 left-0 -translate-y-1/2 px-4 sm:px-8 md:px-16 flex flex-col space-y-6 w-full max-w-[1200px]">
+                class="absolute top-1/2 left-0 -translate-y-1/2 px-4 sm:px-8 md:px-16 flex flex-col space-y-10 w-full max-w-[1200px]">
                 <p class="font-manrope text-xs sm:text-sm text-[#EDEDED] animate-fade-in text-center md:text-left">
                     TÜRKMENISTAN BOÝUNÇA #1 GURLUŞYK KÄRHANASY
                 </p>
@@ -34,8 +34,8 @@
         </div>
         <!-- Advertisement section -->
         <AdvertisementSection />
-        <!-- Garagum section -->
-        <GaragumSection />
+        <!-- Scroll section -->
+        <ScrollSection />
         <!-- Advantages section -->
         <AdvantageSection />
         <!-- About section -->
@@ -77,6 +77,7 @@ import FeatureSection from "@/components/FeatureSection.vue"
 import ServiceSection from "@/components/ServiceSection.vue"
 import AccordionSection from "@/components/AccordionSection.vue"
 import GaragumSection from "@/components/GaragumSection.vue"
+import ScrollSection from "@/components/ScrollSection.vue"
 import { Pagination, Navigation, EffectCoverflow, Autoplay, Scrollbar } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import ScrollReveal from 'scrollreveal';
@@ -103,7 +104,8 @@ export default {
         FeatureSection,
         ServiceSection,
         AccordionSection,
-        GaragumSection
+        GaragumSection,
+        ScrollSection
     },
     created() {
         const isFirstVisit = sessionStorage.getItem('firstVisit')

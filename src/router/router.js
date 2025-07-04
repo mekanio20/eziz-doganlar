@@ -9,11 +9,6 @@ const router = createRouter({
       component: () => import("@/views/HomeView.vue"),
     },
     {
-      path: "/test",
-      name: "Test",
-      component: () => import("@/views/TestView.vue"),
-    },
-    {
       path: "/about",
       name: "About",
       component: () => import("@/views/AboutView.vue"),
@@ -45,6 +40,8 @@ const router = createRouter({
           behavior: "smooth",
         })
       }
+    } else {
+      return { top: 0 }
     }
   },
 })

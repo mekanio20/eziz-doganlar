@@ -40,13 +40,11 @@
                     $t('links.about') }}</router-link>
             <router-link to="/works" class="text-white font-manrope font-[300] text-base">{{
                     $t('links.works') }}</router-link>
-            <router-link to="/services" class="text-white font-manrope font-[300] text-base">{{
-                    $t('links.services') }}</router-link>
             <router-link to="/contact" class="text-white font-manrope font-[300] text-base">{{
                     $t('links.contact') }}</router-link>
           </div>
           <div class="flex flex-col space-y-5">
-            <router-link to="/news" class="font-manrope text-base font-medium text-white/60">Salgymyz</router-link>
+            <h4 class="font-manrope text-base font-medium text-white/60">Salgymyz</h4>
             <p class="font-manrope text-base font-[300]">
               9 Garagum Street
               Bagtyyarlyk district Ashgabat

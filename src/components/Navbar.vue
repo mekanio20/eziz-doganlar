@@ -1,6 +1,6 @@
 <template>
   <div
-    :class="['fixed w-full top-0 z-50 mx-auto text-white select-none', { 'bg-gradient-to-r from-blue-800 via-blue-700 to-blue-900': isScrolled }, background]">
+    :class="['fixed w-full top-0 z-50 mx-auto text-white select-none opacity-90', background]">
     <nav class="sm:container px-4 relative">
       <div class="flex items-center flex-row py-6 justify-between">
         <router-link to="/" class="flex items-center justify-center w-56 cursor-pointer">
@@ -156,13 +156,7 @@ export default {
           name: this.$t('links.works'),
           link_name: 'works',
           link: '/works'
-        },
-        {
-          id: 4,
-          name: this.$t('links.services'),
-          link_name: 'services',
-          link: '/services',
-        },
+        }
       ]
     }
   },

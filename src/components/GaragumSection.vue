@@ -34,7 +34,7 @@
     <!-- Arka plan resmi -->
     <img
       class="w-full h-auto object-cover"
-      src="/imgs/garagum.webp"
+      src="/imgs/g6.webp"
       alt="Garagum Background"
     />
   </section>
