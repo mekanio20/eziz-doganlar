@@ -9,11 +9,11 @@
             <div
                 class="absolute top-1/2 left-0 -translate-y-1/2 px-4 sm:px-8 md:px-16 flex flex-col space-y-10 w-full max-w-[1200px]">
                 <p class="font-manrope text-xs sm:text-sm text-[#EDEDED] animate-fade-in text-center md:text-left">
-                    TÜRKMENISTAN BOÝUNÇA #1 GURLUŞYK KÄRHANASY
+                    {{ $t('hero.title3') }}
                 </p>
                 <h1
                     class="font-manrope font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl tracking-tight leading-snug text-[#EDEDED] animate-fade-in animation-delay-200 text-center md:text-left">
-                    Innowasion Çözgütler Bilen Berk Gurluşyk — Geljegi Bilelikde Gurýarys.
+                    {{ $t('hero.title4') }}
                 </h1>
                 <div class="flex justify-center md:justify-start">
                     <Button class="animate-fade-right" :name="$t('links.works')" route="/works" px="px-8" />

@@ -1,3 +1,84 @@
+export const navs = {
+  TM: [
+    {
+      id: 1,
+      name: "Baş sahypa",
+      link_name: "home",
+      link: "/",
+    },
+    {
+      id: 2,
+      name: "Biz barada",
+      link_name: "about",
+      link: "/about",
+    },
+    {
+      id: 3,
+      name: "Biziň işlerimiz",
+      link_name: "works",
+      link: "/works",
+    },
+    {
+      id: 4,
+      name: "Habarlaşmak",
+      link_name: "contact",
+      link: "/contact",
+    },
+  ],
+  RU: [
+    {
+      id: 1,
+      name: "Главная",
+      link_name: "home",
+      link: "/",
+    },
+    {
+      id: 2,
+      name: "О нас",
+      link_name: "about",
+      link: "/about",
+    },
+    {
+      id: 3,
+      name: "Наши проекты",
+      link_name: "works",
+      link: "/works",
+    },
+    {
+      id: 4,
+      name: "Контакты",
+      link_name: "contact",
+      link: "/contact",
+    },
+  ],
+  EN: [
+    {
+      id: 1,
+      name: "Home",
+      link_name: "home",
+      link: "/",
+    },
+    {
+      id: 2,
+      name: "About Us",
+      link_name: "about",
+      link: "/about",
+    },
+    {
+      id: 3,
+      name: "Our Works",
+      link_name: "works",
+      link: "/works",
+    },
+    {
+      id: 4,
+      name: "Contact",
+      link_name: "contact",
+      link: "/contact",
+    },
+  ],
+};
+
 export const projects = {
   imgs: [
     "/imgs/project-1.webp",
@@ -598,4 +679,724 @@ export const projects = {
       desc: ``,
     },
   ],
+};
+
+export const accordionItems = {
+  imgs: [
+    "/imgs/service-1.webp",
+    "/imgs/service-2.webp",
+    "/imgs/service-3.webp",
+    "/imgs/service-4.webp",
+    "/imgs/service-5.webp",
+    "/imgs/service-6.webp",
+    "/imgs/service-7.webp",
+    "/imgs/service-8.webp",
+    "/imgs/service-9.webp",
+    "/imgs/service-10.webp",
+    "/imgs/service-11.webp",
+  ],
+  TM: [
+    {
+      id: 1,
+      number: "001",
+      title: "Gurluşyk we potratçylyk işleri",
+      description:
+        "Ýaşaýyş, söwda we senagat desgalaryny öz içine alýan giň gerimli gurluşyk we potratçylyk işleri bilen meşgullanýarys. Gurluşygyň başlangyjyndan başlap gutarnykly bezeglere çenli — hil, howpsuzlyk we öz wagtynda tabşyrmagy kepillendirýäris.",
+      color: "bg-[#F5F5F5]",
+    },
+    {
+      id: 2,
+      number: "002",
+      title: "Inženerçilik işleri",
+      description:
+        "Inženerçilik hyzmatlarymyz takyk tehniki meýilleşdirmegi, gurluş seljermesini we ýerine ýetirmegi öz içine alýar. Her taslamanyň berkligini we netijeliligini üpjün etmek üçin öňdebaryjy usullary ulanýarys.",
+      color: "bg-[#F8FCFF]",
+    },
+    {
+      id: 3,
+      number: "003",
+      title: "Açar tabşyrmaly taslamalar",
+      description:
+        "Biz ähli tapgyrlary dolandyrýan açar tabşyrmaly çözgütlere ýöriteleşýäris — dizaýndan başlap tabşyrmaga çenli. Müşderiler ulanmak üçin taýýar bolan doly işe girizilen desgany alýarlar.",
+      color: "bg-[#EDF7FF]",
+    },
+    {
+      id: 4,
+      number: "004",
+      title: "Esas gurluşygy (hünärleşme)",
+      description:
+        "Esasy hünärimiz — güýçli we durnukly binýadyň gurluşygy bolup, uzak möhletleýin binalaryň esasyny üpjün edýäris.",
+      color: "bg-[#DBEFFF]",
+    },
+    {
+      id: 5,
+      number: "005",
+      title: "Dizaýn hyzmatlary",
+      description:
+        "Biz funksiýany, howpsuzlygy we estetikany utgaşdyrýan binagärlik we gurluş dizaýn hyzmatlaryny hödürleýäris. Her bir dizaýn taslamanyň maksadyna we müşderiniň görkezijisine laýyklykda döredilýär.",
+      color: "bg-[#CEE9FF]",
+    },
+    {
+      id: 6,
+      number: "006",
+      title: "Elektrik işleri",
+      description:
+        "Simsizleşdiriş, energiýa paýlanyşy, yşyklandyryş we panelleriň oturdylmagy ýaly ähli elektrik infrastrukturasyny häzirki zaman standartlaryna laýyklykda ýerine ýetirýäris.",
+      color: "bg-[#BFE2FF]",
+    },
+    {
+      id: 7,
+      number: "007",
+      title: "Elektron işleri",
+      description:
+        "Toparymyz akylly ulgamlary, howpsuzlyk ulgamlaryny we häzirki zaman binalar üçin zerur beýleki elektron ulgamlary gurýar we sazlaýar.",
+      color: "bg-[#B1DCFF]",
+    },
+    {
+      id: 8,
+      number: "008",
+      title: "Işgär hyzmatlary",
+      description:
+        "Gurluşygyň ähli tapgyrlarynda tejribeli we ussat işgärleri hödürleýäris. Biziň işgärlerimiz ýokary öndürijilik we howpsuzlyk ölçeglerine laýyklykda iş alyp barýar.",
+      color: "bg-[#A0D5FF]",
+    },
+    {
+      id: 9,
+      number: "009",
+      title: "Mehaniki işler",
+      description:
+        "HVAC ulgamlaryndan suw geçirijilere we liftlere çenli — amatlylygy, funksiýany we uzak möhletleýin işleýşi üpjün edýän takyk mehaniki gurnamalary ýerine ýetirýäris.",
+      color: "bg-[#8ECDFF]",
+    },
+    {
+      id: 10,
+      number: "0010",
+      title: "Desganyň enjamlaşdyrylyşy",
+      description:
+        "Desganyň gurluşygy bilen onuň doly ulanmaga taýýar bolmagyny üpjün edýän ähli enjamlary ornaşdyrýarys we enjamlaşdyrýarys.",
+      color: "bg-[#7DC5FF]",
+    },
+    {
+      id: 11,
+      number: "0011",
+      title: "Landşaft işleri",
+      description:
+        "Desganyň daş-töweregini owadan we peýdaly görnüşe getirmek üçin estetiki we funksional landşaft meýilleşdirmesini ýerine ýetirýäris.",
+      color: "bg-[#5EB8FF]",
+    },
+  ],
+  RU: [
+    {
+      id: 1,
+      number: "001",
+      title: "Строительно-подрядные работы",
+      description:
+        "Мы выполняем широкий спектр строительных и подрядных проектов — от жилых и коммерческих зданий до промышленных объектов. От закладки фундамента до отделки — гарантируем качество, безопасность и своевременную сдачу.",
+      color: "bg-[#F5F5F5]",
+    },
+    {
+      id: 2,
+      number: "002",
+      title: "Инженерные работы",
+      description:
+        "Наши инженерные услуги включают техническое проектирование, структурный анализ и реализацию. Мы применяем передовые методы для обеспечения надежности и эффективности каждого проекта.",
+      color: "bg-[#F8FCFF]",
+    },
+    {
+      id: 3,
+      number: "003",
+      title: "Проекты «под ключ»",
+      description:
+        "Мы специализируемся на решениях «под ключ», управляя всеми этапами проекта — от проектирования до сдачи. Заказчик получает полностью готовый и функциональный объект.",
+      color: "bg-[#EDF7FF]",
+    },
+    {
+      id: 4,
+      number: "004",
+      title: "Строительство фундаментов (специализация)",
+      description:
+        "Наша ключевая специализация — строительство надежных и устойчивых фундаментов, обеспечивающих долговечность зданий.",
+      color: "bg-[#DBEFFF]",
+    },
+    {
+      id: 5,
+      number: "005",
+      title: "Проектные услуги",
+      description:
+        "Мы предлагаем архитектурное и конструктивное проектирование, сочетающее функциональность, безопасность и эстетику. Каждый проект адаптируется под цели заказчика.",
+      color: "bg-[#CEE9FF]",
+    },
+    {
+      id: 6,
+      number: "006",
+      title: "Электромонтажные работы",
+      description:
+        "Мы выполняем полный спектр электромонтажных работ: прокладка кабелей, распределение энергии, освещение, установка щитков — всё по современным стандартам и требованиям безопасности.",
+      color: "bg-[#BFE2FF]",
+    },
+    {
+      id: 7,
+      number: "007",
+      title: "Электронные системы",
+      description:
+        "Наша команда устанавливает и настраивает интеллектуальные системы, системы безопасности и другие электронные компоненты, необходимые для современных зданий.",
+      color: "bg-[#B1DCFF]",
+    },
+    {
+      id: 8,
+      number: "008",
+      title: "Рабочая сила",
+      description:
+        "Мы предоставляем квалифицированную рабочую силу на всех этапах строительства. Наши рабочие обеспечивают бесперебойную реализацию на объекте, соблюдая высокие стандарты безопасности и производительности.",
+      color: "bg-[#A0D5FF]",
+    },
+    {
+      id: 9,
+      number: "009",
+      title: "Механические работы",
+      description:
+        "От систем вентиляции и кондиционирования до сантехники и лифтов — мы осуществляем точный монтаж для комфорта, функциональности и надежности.",
+      color: "bg-[#8ECDFF]",
+    },
+    {
+      id: 10,
+      number: "0010",
+      title: "Оборудование объекта",
+      description:
+        "Мы оснащаем объект всем необходимым оборудованием, чтобы обеспечить его полную готовность к эксплуатации.",
+      color: "bg-[#7DC5FF]",
+    },
+    {
+      id: 11,
+      number: "0011",
+      title: "Благоустройство территории",
+      description:
+        "Мы проектируем и реализуем привлекательные и функциональные открытые пространства, улучшающие внешний вид и комфорт объекта.",
+      color: "bg-[#5EB8FF]",
+    },
+  ],
+  EN: [
+    {
+      id: 1,
+      number: "001",
+      title: "Construction and Contracting Work",
+      description:
+        "We undertake a wide range of construction and contracting projects, including residential, commercial, and industrial structures. From groundbreaking to final finishes, we ensure quality, safety, and timely delivery.",
+      color: "bg-[#F5F5F5]",
+    },
+    {
+      id: 2,
+      number: "002",
+      title: "Engineering Activities",
+      description:
+        "Our engineering services include precise technical planning, structural analysis, and execution. We apply advanced engineering methods to guarantee the durability and efficiency of every project.",
+      color: "bg-[#F8FCFF]",
+    },
+    {
+      id: 3,
+      number: "003",
+      title: "Turnkey Project Delivery",
+      description:
+        "We specialize in turnkey solutions, managing every phase of a project from design to handover. Clients receive a fully completed, operational structure—ready for immediate use.",
+      color: "bg-[#EDF7FF]",
+    },
+    {
+      id: 4,
+      number: "004",
+      title: "Ground Structure Construction (Specialization)",
+      description:
+        "Our core expertise lies in ground structure construction—laying strong and stable foundations that ensure long-lasting buildings.",
+      color: "bg-[#DBEFFF]",
+    },
+    {
+      id: 5,
+      number: "005",
+      title: "Design Services",
+      description:
+        "We offer professional architectural and structural design services that combine functionality, safety, and aesthetic appeal. Every design is tailored to meet project goals and client vision.",
+      color: "bg-[#CEE9FF]",
+    },
+    {
+      id: 6,
+      number: "006",
+      title: "Electrical Work",
+      description:
+        "We handle complete electrical infrastructure, including wiring, power distribution, lighting, and panel installations, all in line with modern standards and safety regulations.",
+      color: "bg-[#BFE2FF]",
+    },
+    {
+      id: 7,
+      number: "007",
+      title: "Electronic Work",
+      description:
+        "Our team installs and configures smart systems, security setups, and other electronic components essential for modern building operations.",
+      color: "bg-[#B1DCFF]",
+    },
+    {
+      id: 8,
+      number: "008",
+      title: "Labour Services",
+      description:
+        "We provide skilled and experienced labourers across all stages of construction. Our workforce ensures smooth on-site execution, adhering to high productivity and safety standards.",
+      color: "bg-[#A0D5FF]",
+    },
+    {
+      id: 9,
+      number: "009",
+      title: "Mechanical Work",
+      description:
+        "From HVAC systems to plumbing and elevators, we deliver precise mechanical installations that support comfort, functionality, and long-term performance.",
+      color: "bg-[#8ECDFF]",
+    },
+    {
+      id: 10,
+      number: "0010",
+      title: "Equipment of the Structure",
+      description:
+        "We furnish and install all structural equipment needed for a complete and ready-to-use facility—bridging the gap between construction and functionality.",
+      color: "bg-[#7DC5FF]",
+    },
+    {
+      id: 11,
+      number: "0011",
+      title: "Landscaping",
+      description:
+        "We design and implement aesthetically pleasing and functional outdoor spaces that enhance the overall look and feel of the property.",
+      color: "bg-[#5EB8FF]",
+    },
+  ],
+};
+
+export const lines = {
+  TM: [
+    `“Biz Öz Ukbybymyzy we <img src='/imgs/ad-1.webp' class='inline w-[40px] sm:w-[60px] md:w-[75px] h-[24px] sm:h-[32px] md:h-[40px] mx-1'/>`,
+    `Tejribämizi <img src='/imgs/ad-2.webp' class='inline w-[40px] sm:w-[60px] md:w-[75px] h-[24px] sm:h-[32px] md:h-[40px] mx-1'/> Siziň Taslamalaryňyza`,
+    `<img src='/imgs/ad-3.webp' class='inline w-[40px] sm:w-[60px] md:w-[75px] h-[24px] sm:h-[32px] md:h-[40px] mx-1'/> Bagyşlaýarys”`,
+  ],
+  RU: [
+    `“Мы нашу экспертизу и <img src='/imgs/ad-1.webp' class='inline w-[40px] sm:w-[60px] md:w-[75px] h-[24px] sm:h-[32px] md:h-[40px] mx-1'/>`,
+    `и наш опыт <img src='/imgs/ad-2.webp' class='inline w-[40px] sm:w-[60px] md:w-[75px] h-[24px] sm:h-[32px] md:h-[40px] mx-1'/> мы посвящаем вашему проекту`,
+    `<img src='/imgs/ad-3.webp' class='inline w-[40px] sm:w-[60px] md:w-[75px] h-[24px] sm:h-[32px] md:h-[40px] mx-1'/>”`,
+  ],
+  EN: [
+    `“We dedicate our expertise and <img src='/imgs/ad-1.webp' class='inline w-[40px] sm:w-[60px] md:w-[75px] h-[24px] sm:h-[32px] md:h-[40px] mx-1'/>`,
+    `our experience <img src='/imgs/ad-2.webp' class='inline w-[40px] sm:w-[60px] md:w-[75px] h-[24px] sm:h-[32px] md:h-[40px] mx-1'/> to your projects`,
+    `<img src='/imgs/ad-3.webp' class='inline w-[40px] sm:w-[60px] md:w-[75px] h-[24px] sm:h-[32px] md:h-[40px] mx-1'/>”`,
+  ],
+};
+
+export const features = {
+  TM: [
+    {
+      id: 1,
+      icon: "diamond",
+      title: "Ygtybarlylyк, Hil",
+      description:
+        "Taslamalarymyzy jogapkärçilik bilen ýerine ýetirýäris. Her bir hyzmatdaşymyz bize doly ynam edip bilýär.",
+    },
+    {
+      id: 2,
+      icon: "settings",
+      title: "Jogapkärçilik",
+      description:
+        "Her bir ädimimizde jogapkärçiligi çemeleşýäris. Netijelerimiziň arkasında berk durýarys.",
+    },
+    {
+      id: 3,
+      icon: "innovation",
+      title: "Innowasiya",
+      description: "Täze tehnologiýalary we usullary işimize ornaşdyrýarys.",
+    },
+    {
+      id: 4,
+      icon: "secury",
+      title: "Howpsuzlyk",
+      description:
+        "Müşderilerin howpsuzlygy ileri tutulýar. Gurluşyk meýdançalarynda howpsuzlyk düzgünlerine eýerýäris.",
+    },
+    {
+      id: 5,
+      icon: "clock",
+      title: "Wagta laýyklyk",
+      description:
+        "Taslamalarymyzy bellenen möhletde tabşyrmak bizin borjumyzdyr. Müny hil bilen utgaşykly ýerine ýetirýäris.",
+    },
+    {
+      id: 6,
+      icon: "customers",
+      title: "Müşderi kanagatlylygy",
+      description: "Müşderilerin işlegleri we teklipleri üns merkezimizdir.",
+    },
+  ],
+  RU: [
+    {
+      id: 1,
+      icon: "diamond",
+      title: "Надежность, качество",
+      description:
+        "Мы выполняем наши проекты с полной ответственностью. Каждый наш партнер может полностью нам доверять.",
+    },
+    {
+      id: 2,
+      icon: "settings",
+      title: "Ответственность",
+      description:
+        "Мы подходим к каждому шагу с ответственностью. Мы стоим твердо за результатами нашей работы.",
+    },
+    {
+      id: 3,
+      icon: "innovation",
+      title: "Инновации",
+      description: "Мы внедряем новые технологии и методы в нашу работу.",
+    },
+    {
+      id: 4,
+      icon: "secury",
+      title: "Безопасность",
+      description:
+        "Безопасность клиентов является приоритетом. Мы соблюдаем правила безопасности на строительных площадках.",
+    },
+    {
+      id: 5,
+      icon: "clock",
+      title: "Соблюдение сроков",
+      description:
+        "Мы обязуемся сдавать проекты в назначенный срок. Это мы выполняем с высоким качеством.",
+    },
+    {
+      id: 6,
+      icon: "customers",
+      title: "Удовлетворенность клиентов",
+      description:
+        "Работы и предложения клиентов находятся в центре нашего внимания.",
+    },
+  ],
+  EN: [
+    {
+      id: 1,
+      icon: "diamond",
+      title: "Reliability, Quality",
+      description:
+        "We execute our projects responsibly. Every partner can fully trust us.",
+    },
+    {
+      id: 2,
+      icon: "settings",
+      title: "Responsibility",
+      description:
+        "We approach every step with responsibility. We stand firmly behind our results.",
+    },
+    {
+      id: 3,
+      icon: "innovation",
+      title: "Innovation",
+      description: "We implement new technologies and methods in our work.",
+    },
+    {
+      id: 4,
+      icon: "secury",
+      title: "Safety",
+      description:
+        "Customer safety is a priority. We comply with safety rules on construction sites.",
+    },
+    {
+      id: 5,
+      icon: "clock",
+      title: "Timeliness",
+      description:
+        "We commit to delivering projects on time. We do this with quality.",
+    },
+    {
+      id: 6,
+      icon: "customers",
+      title: "Customer Satisfaction",
+      description:
+        "Customer work and suggestions are at the center of our focus.",
+    },
+  ],
+};
+
+export const scenes = {
+  imgs: [
+    "/imgs/g1.webp",
+    "/imgs/g2.webp",
+    "/imgs/g3.webp",
+    "/imgs/g4.webp",
+    "/imgs/g5.webp",
+    "/imgs/g6.webp",
+    "/imgs/g7.webp",
+  ],
+  TM: [
+    {
+      id: 1,
+      html: `
+        <div class="w-[90%] md:w-[80%] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white text-center">
+            <h2 class="font-manrope text-2xl md:text-5xl lg:text-[64px] font-bold capitalize mb-2">
+            Biz Garagum Kanaly bilen geljege ýol açýarys!
+            </h2>
+        </div>
+      `,
+    },
+    {
+      id: 2,
+      html: `
+        <div class="w-[90%] md:w-[80%] absolute bottom-10 md:bottom-20 left-5 md:left-20 text-white">
+            <p class="font-manrope font-medium text-sm md:text-lg text-[#EDEDED]">
+            Merkezi Aziýanyň iň gurak ýurtlarynyň biri bolan Türkmenistan, 1375 km uzynlygyndaky Garagum Kanaly arkaly Amu Darýanyň suwlaryny paýlaýar. Bu kanal giň meýdanlarda oba hojalygynyň suwsyzlygyny çözýär, içmeli suw üpjün edýär we gurak ýerleriň ekologik durnuklylygyny üpjün etmäge kömek edýär. Döwlet syýasatynyň möhüm bölegi hökmünde, onuň çeşmelerini häzirki zaman we netijeli suw dolandyryşy arkaly goramak zerurdyr.
+            </p>
+        </div>
+      `,
+    },
+    {
+      id: 3,
+      html: `
+        <div class="w-[90%] md:w-[80%] absolute bottom-10 md:bottom-20 left-5 md:left-20 text-white">
+            <h2 class="font-manrope font-bold text-xl md:text-2xl text-[#EDEDED] pb-4 md:pb-6">
+            “Eziz Doganlar” Suw Howpsuzlygyndaky Orny
+            </h2>
+            <p class="font-manrope font-medium text-sm md:text-lg text-[#EDEDED]">
+            “Eziz Doganlar” Ykdysady Jemgyýeti suw infrastrukturasyny ösdürmek üçin esasy taslamalary amala aşyrdy — nasos stansiýalary, turbalar, suw howdanlary we suwaryş ulgamlaryny täze tehnologiýalar we daşky gurşawa düşünjeli çözgütler bilen gurdy.
+            </p>
+        </div>
+      `,
+    },
+    {
+      id: 4,
+      html: `
+        <div class="w-[90%] md:w-[70%] absolute bottom-10 left-5 md:left-10 text-white">
+            <p class="font-manrope font-medium text-sm md:text-lg text-[#EDEDED] pb-6 md:pb-10">
+            “At Ýigit” Ykdysady Jemgyýeti: 50 000 m³ suw howdany gurup, 1 000 gektar suwarlanýan meýdan döretdi.
+            </p>
+            <p class="font-manrope font-medium text-sm md:text-lg text-[#EDEDED] pb-6 md:pb-10">
+            “At Ýumak” Ykdysady Jemgyýeti: Ýerli toprak we howa şertlerine laýyk uly ekologik durnukly suw howdany gurdy.
+            </p>
+            <p class="font-manrope font-medium text-sm md:text-lg text-[#EDEDED] pb-6 md:pb-10">
+            “At Miwe” Ykdysady Jemgyýeti: Nasos stansiýalary, ýokary basyşly turbalar we kanallary öz içine alýan doly suw üpjünçilik ulgamyny işläp düzdü.
+            </p>
+            <p class="font-manrope font-medium text-sm md:text-lg text-[#EDEDED] pb-6 md:pb-10">
+            Taslamalaryň hemmesinde ylmy toprak analizleri, eroziýa garşy çäreler we daşky gurşawy goramak üçin gaz çykarmak ulgamlary bar.
+            </p>
+        </div>
+      `,
+    },
+    {
+      id: 5,
+      html: `
+        <div class="w-[90%] md:w-[80%] absolute bottom-10 left-5 md:left-10 text-white">
+            <h2 class="font-manrope font-bold text-xl md:text-2xl text-[#EDEDED] pb-6 md:pb-10">
+            Goşmaça Esasy Taslamalar
+            </h2>
+            <ul class="list-disc pl-5 md:pl-6">
+            <li class="font-manrope font-medium text-sm md:text-lg text-[#EDEDED] pb-3 md:pb-5">
+                Ýurtda onlarça awtoulag hyzmat kompleksleri    
+            </li>
+            <li class="font-manrope font-medium text-sm md:text-lg text-[#EDEDED] pb-3 md:pb-5">
+                250 gektar issykhana we 4 000 gektar bag örtügi üçin in engineering işleri
+            </li>
+            <li class="font-manrope font-medium text-sm md:text-lg text-[#EDEDED] pb-3 md:pb-5">
+                Sowukly sklady (her biri 6 000 tonna)
+            </li>
+            <li class="font-manrope font-medium text-sm md:text-lg text-[#EDEDED] pb-3 md:pb-5">
+                Keramika we sanitariýa önümlerini öndürýän zawody
+            </li>
+            </ul>
+        </div>
+      `,
+    },
+    {
+      id: 6,
+      html: `
+        <div class="w-[90%] md:w-[80%] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white text-center">
+            <h2 class="font-manrope text-lg md:text-2xl text-[#EDEDED] font-medium uppercase mb-4 md:mb-10">
+            Biziň Maksadymyz
+            </h2>
+            <h2 class="font-manrope text-xl md:text-4xl font-bold capitalize">
+            “Eziz Doganlar” Türkmenistan ýolbaşçylarynyň belent maksadlaryna laýyklykda, milli ösüşi goldamagy, suw howpsuzlygyny, ekologik deňagramlylygy we durnukly ösüşi üpjün etmegi maksat edinýär.
+            </h2>
+        </div>
+      `,
+    },
+  ],  
+  RU: [
+    {
+      id: 1,
+      html: `
+        <div class="w-[90%] md:w-[80%] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white text-center">
+            <h2 class="font-manrope text-2xl md:text-5xl lg:text-[64px] font-bold capitalize mb-2">
+            Мы открываем путь в будущее с Каракумским каналом!
+            </h2>
+        </div>
+      `,
+    },
+    {
+      id: 2,
+      html: `
+        <div class="w-[90%] md:w-[80%] absolute bottom-10 md:bottom-20 left-5 md:left-20 text-white">
+            <p class="font-manrope font-medium text-sm md:text-lg text-[#EDEDED]">
+            Туркменистан, одна из самых засушливых стран Центральной Азии, сильно зависит от Каракумского канала — водного пути длиной 1375 км, распределяющего воды Амударьи по стране. Он орошает огромные сельхозугодья, обеспечивает питьевой водой и стабилизирует экологию засушливых районов. Сохранение его ресурсов посредством современного и эффективного управления водными ресурсами является важной частью национальной стратегии.
+            </p>
+        </div>
+      `,
+    },
+    {
+      id: 3,
+      html: `
+        <div class="w-[90%] md:w-[80%] absolute bottom-10 md:bottom-20 left-5 md:left-20 text-white">
+            <h2 class="font-manrope font-bold text-xl md:text-2xl text-[#EDEDED] pb-4 md:pb-6">
+            Роль «Эзиз Доганлар» в водной безопасности
+            </h2>
+            <p class="font-manrope font-medium text-sm md:text-lg text-[#EDEDED]">
+            Экономическое общество «Эзиз Доганлар» реализовало ключевые проекты по улучшению водной инфраструктуры — строительство насосных станций, трубопроводов, резервуаров и систем орошения с использованием современных инженерных и экологически ответственных решений.
+            </p>
+        </div>
+      `,
+    },
+    {
+      id: 4,
+      html: `
+        <div class="w-[90%] md:w-[70%] absolute bottom-10 left-5 md:left-10 text-white">
+            <p class="font-manrope font-medium text-sm md:text-lg text-[#EDEDED] pb-6 md:pb-10">
+            Экономическое общество «Ат Йигит»: построено 50 000 м³ резервуара, созданы 1 000 гектаров орошаемых земель.
+            </p>
+            <p class="font-manrope font-medium text-sm md:text-lg text-[#EDEDED] pb-6 md:pb-10">
+            Экономическое общество «Ат Юмак»: построен крупный экосовместимый резервуар, адаптированный к местным почвам и климату.
+            </p>
+            <p class="font-manrope font-medium text-sm md:text-lg text-[#EDEDED] pb-6 md:pb-10">
+            Экономическое общество «Ат Миве»: разработана полная система водоснабжения, включая насосные станции, трубопроводы высокого давления и каналы.
+            </p>
+            <p class="font-manrope font-medium text-sm md:text-lg text-[#EDEDED] pb-6 md:pb-10">
+            Все проекты включали научный анализ почвы, контроль эрозии и системы выпуска газа для экологической стабильности.
+            </p>
+        </div>
+      `,
+    },
+    {
+      id: 5,
+      html: `
+        <div class="w-[90%] md:w-[80%] absolute bottom-10 left-5 md:left-10 text-white">
+            <h2 class="font-manrope font-bold text-xl md:text-2xl text-[#EDEDED] pb-6 md:pb-10">
+            Дополнительные ключевые проекты
+            </h2>
+            <ul class="list-disc pl-5 md:pl-6">
+            <li class="font-manrope font-medium text-sm md:text-lg text-[#EDEDED] pb-3 md:pb-5">
+                Десятки автосервисных комплексов по всей стране    
+            </li>
+            <li class="font-manrope font-medium text-sm md:text-lg text-[#EDEDED] pb-3 md:pb-5">
+                Инженерные работы для 250 га теплиц и 4000 га садов
+            </li>
+            <li class="font-manrope font-medium text-sm md:text-lg text-[#EDEDED] pb-3 md:pb-5">
+                Холодильные склады (по 6000 тонн каждый)
+            </li>
+            <li class="font-manrope font-medium text-sm md:text-lg text-[#EDEDED] pb-3 md:pb-5">
+                Заводы по производству керамической и санитарной продукции
+            </li>
+            </ul>
+        </div>
+      `,
+    },
+    {
+      id: 6,
+      html: `
+        <div class="w-[90%] md:w-[80%] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white text-center">
+            <h2 class="font-manrope text-lg md:text-2xl text-[#EDEDED] font-medium uppercase mb-4 md:mb-10">
+            Наша миссия
+            </h2>
+            <h2 class="font-manrope text-xl md:text-4xl font-bold capitalize">
+            «Эзиз Доганлар» остается приверженным поддержке национального развития, обеспечению водной безопасности, экологического баланса и устойчивого прогресса в соответствии с почетными целями, поставленными руководством Туркменистана.
+            </h2>
+        </div>
+      `,
+    },
+  ],
+  EN: [
+    {
+      id: 1,
+      html: `
+        <div class="w-[90%] md:w-[80%] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white text-center">
+            <h2 class="font-manrope text-2xl md:text-5xl lg:text-[64px] font-bold capitalize mb-2">
+            We open the path to the future with the Karakum Canal!
+            </h2>
+        </div>
+      `,
+    },
+    {
+      id: 2,
+      html: `
+        <div class="w-[90%] md:w-[80%] absolute bottom-10 md:bottom-20 left-5 md:left-20 text-white">
+            <p class="font-manrope font-medium text-sm md:text-lg text-[#EDEDED]">
+            Turkmenistan, one of Central Asia’s driest countries, relies heavily on the Karakum Canal, a 1,375 km-long waterway that distributes Amu Darya’s waters across the nation. It irrigates vast farmlands, provides drinking water, and helps stabilize the ecology of arid regions. As a vital part of the national strategy, preserving its resources through modern, efficient water management is essential.
+            </p>
+        </div>
+      `,
+    },
+    {
+      id: 3,
+      html: `
+        <div class="w-[90%] md:w-[80%] absolute bottom-10 md:bottom-20 left-5 md:left-20 text-white">
+            <h2 class="font-manrope font-bold text-xl md:text-2xl text-[#EDEDED] pb-4 md:pb-6">
+            Eziz Doganlar’s Role in Water Security
+            </h2>
+            <p class="font-manrope font-medium text-sm md:text-lg text-[#EDEDED]">
+            Eziz Doganlar Economic Society has implemented key projects to enhance water infrastructure—building pumping stations, pipelines, reservoirs, and irrigation systems using modern engineering and environmentally conscious solutions.
+            </p>
+        </div>
+      `,
+    },
+    {
+      id: 4,
+      html: `
+        <div class="w-[90%] md:w-[70%] absolute bottom-10 left-5 md:left-10 text-white">
+            <p class="font-manrope font-medium text-sm md:text-lg text-[#EDEDED] pb-6 md:pb-10">
+            At Ýigit Economic Society: Built a 50,000 m³ reservoir, creating 1,000 hectares of irrigated farmland.
+            </p>
+            <p class="font-manrope font-medium text-sm md:text-lg text-[#EDEDED] pb-6 md:pb-10">
+            At Ýumak Economic Society: Constructed a large eco-sustainable reservoir, adapted to local soil and climate.
+            </p>
+            <p class="font-manrope font-medium text-sm md:text-lg text-[#EDEDED] pb-6 md:pb-10">
+            At Miwe Economic Society: Developed a full water supply system including pumping stations, high-pressure pipelines, and canals.
+            </p>
+            <p class="font-manrope font-medium text-sm md:text-lg text-[#EDEDED] pb-6 md:pb-10">
+            All projects included scientific soil analysis, erosion control, and gas-release systems for environmental stability.
+            </p>
+        </div>
+      `,
+    },
+    {
+      id: 5,
+      html: `
+        <div class="w-[90%] md:w-[80%] absolute bottom-10 left-5 md:left-10 text-white">
+            <h2 class="font-manrope font-bold text-xl md:text-2xl text-[#EDEDED] pb-6 md:pb-10">
+            Additional Key Projects
+            </h2>
+            <ul class="list-disc pl-5 md:pl-6">
+            <li class="font-manrope font-medium text-sm md:text-lg text-[#EDEDED] pb-3 md:pb-5">
+                Dozens of vehicle service complexes across the country    
+            </li>
+            <li class="font-manrope font-medium text-sm md:text-lg text-[#EDEDED] pb-3 md:pb-5">
+                Engineering for 250 ha of greenhouses and 4,000 ha of orchards
+            </li>
+            <li class="font-manrope font-medium text-sm md:text-lg text-[#EDEDED] pb-3 md:pb-5">
+                Cold storage facilities (6,000 tons each)
+            </li>
+            <li class="font-manrope font-medium text-sm md:text-lg text-[#EDEDED] pb-3 md:pb-5">
+                Ceramic and sanitary ware production plants
+            </li>
+            </ul>
+        </div>
+      `,
+    },
+    {
+      id: 6,
+      html: `
+        <div class="w-[90%] md:w-[80%] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white text-center">
+            <h2 class="font-manrope text-lg md:text-2xl text-[#EDEDED] font-medium uppercase mb-4 md:mb-10">
+            Our Mission
+            </h2>
+            <h2 class="font-manrope text-xl md:text-4xl font-bold capitalize">
+            Eziz Doganlar remains committed to supporting national development, ensuring water security, ecological balance, and sustainable progress in line with the honorable goals set by Turkmenistan’s leadership.
+            </h2>
+        </div>
+      `,
+    },
+  ]  
 };

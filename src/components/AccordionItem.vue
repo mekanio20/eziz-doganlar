@@ -25,7 +25,7 @@
 
                 <!-- Image -->
                 <div class="w-full lg:w-[300px] h-auto relative lg:absolute lg:right-4 lg:top-10">
-                    <img :src="item.image"
+                    <img :src="accordionImage"
                         class="w-full h-full object-cover rounded-lg hover:scale-105 transition-transform duration-300" />
                 </div>
             </div>
@@ -34,6 +34,7 @@
 </template>
 
 <script>
+import { accordionItems } from '@/data/index.js'
 export default {
     name: 'AccordionItem',
     props: {
@@ -49,6 +50,7 @@ export default {
     data() {
         return {
             contentHeight: 0,
+            accordionImage: accordionItems.imgs[Number(this.item.id) - 1]
         };
     },
     mounted() {

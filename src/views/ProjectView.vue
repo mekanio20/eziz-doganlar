@@ -82,7 +82,7 @@
                                     </h2>
                                 </div>
                                 <div class="flex items-center space-x-2 absolute bottom-5 left-1/2 transform -translate-x-1/2 hover:cursor-pointer hover:bg-slate-400/40 duration-300 rounded-full px-4 py-1">
-                                    <p class="font-manrope font-normal text-sm text-white">Görmek</p>
+                                    <p class="font-manrope font-normal text-sm text-white">{{ $t('common.readMore') }}</p>
                                     <svg width="35" height="14" viewBox="0 0 35 14" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path d="M27.4736 2.89471L31.5263 6.94735L27.4736 11" stroke="white"

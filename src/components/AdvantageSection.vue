@@ -1,6 +1,7 @@
 <template>
     <section class="sm:container px-4 sm:mx-auto sm:pb-20 pb-10">
-        <h2 class="font-manrope md:text-4xl sm:text-3xl text-2xl text-[#0C1A30] text-center pb-20 uppercase" :class="{ 'animate-fade-in': showAnimations }">Biziň Üstünliklerimiziň Görkezijisi
+        <h2 class="font-manrope md:text-4xl sm:text-3xl text-2xl text-[#0C1A30] text-center pb-20 uppercase" :class="{ 'animate-fade-in': showAnimations }">
+            {{ $t('advantages.title1') }}
         </h2>
 
         <!-- First Row -->
@@ -10,7 +11,9 @@
                 class="stat-card bg-blue-700 p-6 sm:p-8 lg:p-10 flex flex-col justify-between min-h-[200px] sm:min-h-[240px] lg:min-h-[280px] md:col-span-2"
                 :class="{'animate-scale-in': showAnimations, 'animation-delay-100': showAnimations}">
                 <div>
-                    <h2 class="stat-label text-base sm:text-lg lg:text-xl mb-2">Tejribämiz</h2>
+                    <h2 class="stat-label text-base sm:text-lg lg:text-xl mb-2">
+                        {{ $t('advantages.title2') }}
+                    </h2>
                 </div>
                 <div class="mt-auto">
                     <div class="stat-number text-3xl sm:text-4xl lg:text-5xl xl:text-6xl">
@@ -25,7 +28,9 @@
                 :class="{'animate-scale-in': showAnimations, 'animation-delay-200': showAnimations}"
                 @mouseenter="handleHover('completed')" @mouseleave="handleLeave('completed')">
                 <div>
-                    <h2 class="stat-label text-base sm:text-lg lg:text-xl mb-2">Ýerine ýetiren işlerimiz</h2>
+                    <h2 class="stat-label text-base sm:text-lg lg:text-xl mb-2">
+                        {{ $t('advantages.title3') }}
+                    </h2>
                 </div>
                 <div class="mt-auto">
                     <div class="stat-number text-3xl sm:text-4xl lg:text-5xl xl:text-6xl">
@@ -40,7 +45,9 @@
                 :class="{'animate-scale-in': showAnimations, 'animation-delay-300': showAnimations}"
                 @mouseenter="handleHover('workers')" @mouseleave="handleLeave('workers')">
                 <div>
-                    <h2 class="stat-label text-base sm:text-lg lg:text-xl mb-2">Işgärlerimiz</h2>
+                    <h2 class="stat-label text-base sm:text-lg lg:text-xl mb-2">
+                        {{ $t('advantages.title4') }}
+                    </h2>
                 </div>
                 <div class="mt-auto">
                     <div class="stat-number text-3xl sm:text-4xl lg:text-5xl xl:text-6xl">
@@ -55,7 +62,9 @@
                 :class="{'animate-scale-in': showAnimations, 'animation-delay-400': showAnimations}"
                 @mouseenter="handleHover('ongoing')" @mouseleave="handleLeave('ongoing')">
                 <div>
-                    <h2 class="stat-label text-base sm:text-lg lg:text-xl mb-2">Dowam edýän işlerimiz</h2>
+                    <h2 class="stat-label text-base sm:text-lg lg:text-xl mb-2">
+                        {{ $t('advantages.title5') }}
+                    </h2>
                 </div>
                 <div class="mt-auto">
                     <div class="stat-number text-3xl sm:text-4xl lg:text-5xl xl:text-6xl">
@@ -73,7 +82,8 @@
                 :class="{'animate-scale-in': showAnimations, 'animation-delay-500': showAnimations}"
                 @mouseenter="handleHover('current')" @mouseleave="handleLeave('current')">
                 <div>
-                    <h2 class="stat-label text-base sm:text-lg lg:text-xl mb-2">2025-nji ýylda ýerine ýetiren işlerimiz
+                    <h2 class="stat-label text-base sm:text-lg lg:text-xl mb-2">
+                        {{ $t('advantages.title6') }}
                     </h2>
                 </div>
                 <div class="mt-auto">
@@ -89,7 +99,9 @@
                 :class="{'animate-scale-in': showAnimations, 'animation-delay-600': showAnimations}"
                 @mouseenter="handleHover('major')" @mouseleave="handleLeave('major')">
                 <div>
-                    <h2 class="stat-label text-base sm:text-lg lg:text-xl mb-2">Uly işlerimiz</h2>
+                    <h2 class="stat-label text-base sm:text-lg lg:text-xl mb-2">
+                        {{ $t('advantages.title7') }}
+                    </h2>
                 </div>
                 <div class="mt-auto">
                     <div class="stat-number text-3xl sm:text-4xl lg:text-5xl xl:text-6xl">

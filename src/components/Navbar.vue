@@ -1,12 +1,12 @@
 <template>
-  <div
-    :class="['fixed w-full top-0 z-50 mx-auto text-white select-none opacity-90', background]">
+  <div :class="['fixed w-full top-0 z-50 mx-auto text-white select-none opacity-90', isScrolled ? 'bg-gradient-to-r from-blue-800 via-blue-700 to-blue-900' : background]">
     <nav class="sm:container px-4 relative">
       <div class="flex items-center flex-row py-6 justify-between">
         <router-link to="/" class="flex items-center justify-center w-56 cursor-pointer">
           <img class="w-full h-full object-cover" src="/svgs/logo.svg">
         </router-link>
-        <div class="laptop:flex items-center hidden absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        <div
+          class="laptop:flex items-center hidden absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
           <ul class="flex items-center justify-around">
             <li v-for="item in links" :key="item.id" class="px-2 xl:px-4">
               <router-link :to="item.link"
@@ -39,7 +39,8 @@
                       stroke-linejoin="round" />
                   </svg>
                 </div>
-                <div v-if="isDropdown" class="absolute bg-white h-fit top-8 right-4 flex flex-col rounded-md overflow-hidden">
+                <div v-if="isDropdown"
+                  class="absolute bg-white h-fit top-8 right-4 flex flex-col rounded-md overflow-hidden">
                   <span v-for="(item, index) in langs" :key="index" @click="updateLang(item)"
                     v-show="item !== this.locale"
                     class="text-black py-2 px-4 cursor-pointer hover:bg-gray-100 duration-200">{{ item }}</span>
@@ -63,7 +64,8 @@
     </nav>
   </div>
   <!-- Mobile -->
-  <div class="select-none w-full fixed z-20 top-0 !overflow-hidden duration-200 bg-gradient-to-r from-blue-800 via-blue-700 to-blue-900"
+  <div
+    class="select-none w-full fixed z-20 top-0 !overflow-hidden duration-200 bg-gradient-to-r from-blue-800 via-blue-700 to-blue-900"
     :class="[isBurger ? 'h-full' : 'h-0']">
     <div class="mt-28 px-4">
       <div class="w-full flex flex-col items-start space-y-6 px-1 mt-20">
@@ -120,7 +122,7 @@
 
 <script>
 import Button from './base/button.vue';
-import { RouterLink } from 'vue-router';
+import { navs } from '@/data/index.js'
 export default {
   name: "Navbar",
   data() {
@@ -134,55 +136,22 @@ export default {
       langs: ['TM', 'RU', 'EN'],
       isLang: false,
       isService: false,
-      hizmetler: {
-        isDropdown: false,
-        isRotated: false
-      },
-      links: [
-        {
-          id: 1,
-          name: this.$t('links.home'),
-          link_name: 'home',
-          link: '/'
-        },
-        {
-          id: 2,
-          name: this.$t('links.about'),
-          link_name: 'about',
-          link: '/about'
-        },
-        {
-          id: 3,
-          name: this.$t('links.works'),
-          link_name: 'works',
-          link: '/works'
-        }
-      ]
+      links: navs[this.$i18n.locale]
     }
   },
   props: {
     background: {
       type: String,
       default: 'transparent'
-    },
-    link: {
-      type: String
     }
   },
   components: {
-    RouterLink,
     Button
   },
   methods: {
-    dropdown(link) {
-      if (link) {
-        this.hizmetler.isDropdown = !this.hizmetler.isDropdown
-        this.hizmetler.isRotated = !this.hizmetler.isRotated
-      } else {
-        this.isDropdown = !this.isDropdown
-        console.log('dropdown -> ', this.isDropdown)
-        this.isRotated = !this.isRotated
-      }
+    dropdown() {
+      this.isDropdown = !this.isDropdown
+      this.isRotated = !this.isRotated
     },
     openBurger() {
       this.isBurger = !this.isBurger
@@ -199,8 +168,6 @@ export default {
       if (event.clientY > 100) {
         this.isDropdown = false
         this.isRotated = false
-        this.hizmetler.isDropdown = false
-        this.hizmetler.isRotated = false
       }
     },
     handleScroll() {
@@ -216,6 +183,14 @@ export default {
   beforeUnmount() {
     document.removeEventListener('click', this.handleClickOutside)
     window.removeEventListener('scroll', this.handleScroll)
+  },
+  watch: {
+    '$i18n.locale': {
+      immediate: true,
+      handler() {
+        this.links = navs[this.$i18n.locale]
+      }
+    }
   }
 }
 </script>

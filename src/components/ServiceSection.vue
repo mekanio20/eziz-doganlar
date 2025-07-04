@@ -4,7 +4,7 @@
         <div
             class="flex flex-col space-y-2 font-manrope sm:text-4xl text-3xl md:text-5xl w-full text-center">
             <h2 class="text-[#0C1A30]" :class="{ 'animate-fade-in': showAnimations }">
-                Biziň Hyzmatlarymyz
+                {{ $t('common.ourServices') }}
             </h2>
         </div>
     </section>

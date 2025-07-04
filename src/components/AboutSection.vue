@@ -6,23 +6,21 @@
             <div class="flex flex-col space-y-2 font-manrope">
                 <h2 class="text-[#0C1A30] text-3xl sm:text-4xl md:text-5xl font-medium"
                     :class="{ 'animate-fade-in': showAnimations }">
-                    Biz Iň Ýokary Hilli We Ygtybarly
+                    {{ $t('about.title1') }}
                 </h2>
                 <h2 class="text-[#B2B2B2] text-3xl sm:text-4xl md:text-5xl font-medium"
                     :class="{ 'animate-fade-in': showAnimations, 'animation-delay-200': showAnimations }">
-                    Serişdeleri Ulanýarys
+                    {{ $t('about.title2') }}
                 </h2>
             </div>
 
             <p class="font-manrope text-base sm:text-lg text-[#838589]"
                 :class="{ 'animate-fade-right': showAnimations, 'animation-delay-300': showAnimations }">
-                Her bir gurluşyk tapgyrynda berk hil gözegçiligi bilen seçilen serişdeler taslamalaryň uzak ömürli
-                bolmagyny üpjün edýär.
-                Gurluşykda ulanýan serişdelerimiz taslamalaryň uzak ömürli bolmagyny üpjün edýär.
+                {{ $t('about.title3') }}
             </p>
 
             <Button :class="{ 'animate-fade-right': showAnimations, 'animation-delay-400': showAnimations }"
-                :name="'dowamy'" route="/about" bg_color="bg-[#0062B0]" text_color="text-white" icon_bg_color="bg-white"
+                :name="$tc('common.next')" route="/about" bg_color="bg-[#0062B0]" text_color="text-white" icon_bg_color="bg-white"
                 icon_color="#0062B0" px="px-8" />
         </div>
 

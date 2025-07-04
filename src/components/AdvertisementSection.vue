@@ -1,8 +1,8 @@
 <template>
     <section class="py-20">
-        <!-- Başlık -->
+        <!-- Header -->
         <h2 class="font-manrope text-sm sm:text-base text-[#0C1A30] text-center pb-10 px-4">
-            1994-nji ýyldan bäri ösen gurluşyk çözgütleri
+            {{ $t('common.title') }}
         </h2>
 
         <!-- Scrolling Text -->
@@ -21,15 +21,12 @@
 </template>
 
 <script>
+import { lines } from '@/data/index.js'
 export default {
     name: "AdvertisementSection",
     data() {
         return {
-            lines: [
-                `“Biz Öz Ukbybymyzy we <img src='/imgs/ad-1.webp' class='inline w-[40px] sm:w-[60px] md:w-[75px] h-[24px] sm:h-[32px] md:h-[40px] mx-1'/>`,
-                `Tejribämizi <img src='/imgs/ad-2.webp' class='inline w-[40px] sm:w-[60px] md:w-[75px] h-[24px] sm:h-[32px] md:h-[40px] mx-1'/> Siziň Taslamalaryňyza`,
-                `<img src='/imgs/ad-3.webp' class='inline w-[40px] sm:w-[60px] md:w-[75px] h-[24px] sm:h-[32px] md:h-[40px] mx-1'/> Bagyşlaýarys”`,
-            ],
+            lines: lines[this.$i18n.locale],
             positions: [0, 0, 0],
             lastScrollY: 0,
             ticking: false,
@@ -61,5 +58,10 @@ export default {
             }
         },
     },
+    watch: {
+        '$i18n.locale'() {
+            this.lines = lines[this.$i18n.locale]
+        }
+    }
 };
 </script>

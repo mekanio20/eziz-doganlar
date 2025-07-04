@@ -30,29 +30,39 @@
             </div>
             <div class="flex-1 w-full px-0 lg:px-10">
                 <div class="flex flex-col space-y-8 pb-20">
-                    <h2 class="font-manrope font-semibold text-sm uppercase">MAGLUMAT</h2>
+                    <h2 class="font-manrope font-semibold text-sm uppercase">
+                        {{ $t('projects.title3') }}
+                    </h2>
                     <p class="font-manrope text-base">
                         {{ project.desc }}
                     </p>
                 </div>
 
                 <div class="flex flex-col space-y-8">
-                    <h2 class="font-manrope font-semibold text-sm uppercase">Goşmaça maglumatlar</h2>
+                    <h2 class="font-manrope font-semibold text-sm uppercase">
+                        {{ $t('projects.title4') }}
+                    </h2>
                     <div class="flex flex-col space-y-4">
                         <div class="flex items-center justify-between py-4 border-b border-black">
-                            <p class="font-manrope font-semibold text-base uppercase">Employer</p>
+                            <p class="font-manrope font-semibold text-base uppercase">
+                                {{ $t('projects.title5') }}
+                            </p>
                             <p class="font-manrope text-sm">{{ project.subtitle }}</p>
                         </div>
                         <div class="flex items-center justify-between py-4 border-b border-black">
-                            <p class="font-manrope font-semibold text-base uppercase">Type of project</p>
+                            <p class="font-manrope font-semibold text-base uppercase">
+                                {{ $t('projects.title6') }}
+                            </p>
                             <p class="font-manrope text-sm">{{ project.title }}</p>
                         </div>
                         <div class="flex items-center justify-between py-4 border-b border-black">
-                            <p class="font-manrope font-semibold text-base uppercase">Total Construction Area</p>
+                            <p class="font-manrope font-semibold text-base uppercase">
+                                {{ $t('projects.title7') }}
+                            </p>
                             <p class="font-manrope text-sm">{{ project.construction_area }}</p>
                         </div>
                         <div class="flex items-center justify-between py-4 border-b border-black">
-                            <p class="font-manrope font-semibold text-base uppercase">Total Indoor Area (m<sup>2</sup>)
+                            <p class="font-manrope font-semibold text-base uppercase">{{ $t('projects.title8') }} (m<sup>2</sup>)
                             </p>
                             <p class="font-manrope text-sm" v-html="project.indoor_area"></p>
                         </div>
@@ -74,10 +84,10 @@
         <div class="container px-4 sm:px-6 lg:px-8 pb-20">
             <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-10">
                 <h2 class="text-3xl md:text-4xl lg:text-5xl font-manrope font-medium capitalize">
-                    Meňzeş işlerimiz
+                    {{ $t('projects.title9') }}
                 </h2>
                 <Button :class="[showAnimations ? 'animate-fade-right animation-delay-300' : '']"
-                    :name="'ÄHLI HYZMATLARYMYZY GÖRMEK'" route="/about" bg_color="bg-[#0062B0]" text_color="text-white"
+                    :name="$t('common.allVisibleServices')" route="/about" bg_color="bg-[#0062B0]" text_color="text-white"
                     icon_bg_color="bg-white" icon_color="#0062B0" px="px-8" />
             </div>
 
@@ -102,7 +112,7 @@
                                 </div>
                                 <div
                                     class="flex items-center space-x-2 absolute bottom-5 left-1/2 transform -translate-x-1/2 hover:bg-slate-400/40 duration-300 rounded-full px-4 py-1 cursor-pointer">
-                                    <p class="font-manrope text-sm text-white">Görmek</p>
+                                    <p class="font-manrope text-sm text-white">{{ $t('common.readMore') }}</p>
                                     <svg width="35" height="14" viewBox="0 0 35 14" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path d="M27.4736 2.89471L31.5263 6.94735L27.4736 11" stroke="white"

@@ -3,7 +3,7 @@
         class="project-card cursor-pointer group relative overflow-hidden rounded-2xl bg-white">
         <!-- Image Container -->
         <div class="relative h-[450px] overflow-hidden">
-            <img :src="project.image" :alt="project.title"
+            <img :src="image" :alt="project.title"
                 class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" />
             <!-- Gradient Overlay -->
             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/40 to-transparent"></div>
@@ -12,7 +12,7 @@
             <div class="absolute inset-0 p-6 sm:p-8 flex flex-col justify-between">
                 <!-- Top Section - Company Name -->
                 <div class="flex justify-between items-start">
-                    <p class="text-white/80 text-sm font-[300]">{{ project.company }}</p>
+                    <p class="text-white/80 text-sm font-[300]">{{ project.subtitle }}</p>
                     <!-- Arrow Icon -->
                     <div
                         class="bg-white/10 backdrop-blur-sm rounded-full p-2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-2 group-hover:translate-x-0">
@@ -44,6 +44,7 @@
 </template>
 
 <script>
+import { projects } from '@/data/index.js'
 export default {
     name: 'ProjectCard',
     props: {
@@ -53,6 +54,11 @@ export default {
             validator(value) {
                 return value && typeof value.title === 'string' && typeof value.company === 'string' && typeof value.image === 'string'
             }
+        }
+    },
+    data() {
+        return {
+            image: projects.imgs[Number(this.project.id) - 1]
         }
     }
 }

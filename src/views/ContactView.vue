@@ -24,7 +24,7 @@
                 <!-- Form -->
                 <div class="flex w-full items-start flex-col space-y-6 laptop:mr-20">
                     <!-- Input Fields -->
-                    <div v-for="(field, key) in fields" :key="key" class="w-full relative">
+                    <div v-for="(field, key) in fields[this.$i18n.locale][0]" :key="key" class="w-full relative">
                         <input v-model="form[key]" :type="field.type" :id="key"
                             :class="['w-full px-0 py-4 text-lg border-0 border-b border-[#0C1A30] bg-transparent placeholder-transparent focus:border-primary-600 focus:outline-none peer', errors[key] ? 'border-red-500' : '']"
                             :placeholder="field.placeholder" required />
@@ -37,24 +37,27 @@
 
                     <!-- Submit Button -->
                     <button
-                        class="w-full font-manrope font-semibold !mt-16 text-center rounded-md text-white p-4 sm:text-xl text-base bg-[#003DA6] hover:bg-[#3c7ade] duration-300 uppercase">
-                        UGRATMAK
+                        class="w-full font-manrope font-semibold !mt-16 text-center rounded-md text-white p-4 sm:text-xl text-sm bg-[#003DA6] hover:bg-[#3c7ade] duration-300 uppercase">
+                        {{ $t('common.send') }}
                     </button>
                 </div>
 
                 <!-- Contact Info -->
-                <div class="w-full laptop:w-1/2 px-4 sm:px-10 lg:px-20 mb-10 laptop:mb-0">
+                <div class="w-full px-4 sm:px-10 lg:px-20 mb-10 laptop:mb-0">
                     <div class="flex flex-col space-y-10">
                         <div class="flex flex-col space-y-5">
-                            <h4 class="font-manrope text-base font-medium text-[#003DA6]">Ýazmak üçin</h4>
-                            <a href="mailto:info@ezizdoganlar.com"
-                                class="font-manrope text-[#0C1A30] font-[300] text-base">
+                            <h4 class="font-manrope text-base font-medium text-black/60">
+                                {{ $t('footer.title4') }}
+                            </h4>
+                            <a href="mailto:info@ezizdoganlar.com" class="font-manrope text-black font-[300] text-base">
                                 info@ezizdoganlar.com
                             </a>
                         </div>
                         <div class="flex flex-col space-y-5">
-                            <h4 class="font-manrope text-base font-medium text-[#003DA6]">Jaň etmek</h4>
-                            <a href="tel:+99312753577" class="font-manrope text-[#0C1A30] font-[300] text-base">
+                            <h4 class="font-manrope text-base font-medium text-black/60">
+                                {{ $t('footer.title5') }}
+                            </h4>
+                            <a href="tel:+99312753577" class="font-manrope text-black font-[300] text-base">
                                 +993 12 75 35 77
                             </a>
                         </div>
@@ -116,10 +119,30 @@ export default {
             },
             errors: {},
             fields: {
-                fullName: { label: 'Doly adyňyz', placeholder: 'Doly adyňyz', type: 'text' },
-                phone: { label: 'Telefon belginiz', placeholder: 'Telefon belginiz', type: 'tel' },
-                email: { label: 'Elektron salgyňyz', placeholder: 'Elektron salgyňyz', type: 'email' },
-                message: { label: 'Habarlaşmak', placeholder: 'Habarlaşmak', type: 'text' }
+                TM: [
+                    {
+                        fullName: { label: 'Doly adyňyz', placeholder: 'Doly adyňyz', type: 'text' },
+                        phone: { label: 'Telefon belginiz', placeholder: 'Telefon belginiz', type: 'tel' },
+                        email: { label: 'Elektron salgyňyz', placeholder: 'Elektron salgyňyz', type: 'email' },
+                        message: { label: 'Habarlaşmak', placeholder: 'Habarlaşmak', type: 'text' }
+                    }
+                ],
+                RU: [
+                    {
+                        fullName: { label: 'Полное имя', placeholder: 'Полное имя', type: 'text' },
+                        phone: { label: 'Номер телефона', placeholder: 'Номер телефона', type: 'tel' },
+                        email: { label: 'Адрес электронной почты', placeholder: 'Адрес электронной почты', type: 'email' },
+                        message: { label: 'Сообщение', placeholder: 'Сообщение', type: 'text' }
+                    }
+                ],
+                EN: [
+                    {
+                        fullName: { label: 'Full Name', placeholder: 'Full Name', type: 'text' },
+                        phone: { label: 'Phone Number', placeholder: 'Phone Number', type: 'tel' },
+                        email: { label: 'Email Address', placeholder: 'Email Address', type: 'email' },
+                        message: { label: 'Message', placeholder: 'Message', type: 'text' }
+                    }
+                ]
             }
         }
     },
@@ -148,6 +171,6 @@ export default {
             await new Promise(res => setTimeout(res, 1500));
             alert('Form ugratdyňyz!');
         }
-    }
+    },
 }
 </script>
